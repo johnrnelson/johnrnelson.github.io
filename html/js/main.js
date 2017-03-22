@@ -10,7 +10,7 @@ window.onload = function() {
 
 
     APP.DEBUGEL = document.getElementById('DEBUGEL');
-    APP.DEBUGEL.innerHTML = 'HOK';
+    APP.DEBUGEL.innerHTML = 'Looks like scripting works. :-)';
     
 
     if (localStorage.getItem('DEBUG')) {
