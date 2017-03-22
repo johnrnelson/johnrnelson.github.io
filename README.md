@@ -1,5 +1,8 @@
 # johnrnelson.github.io
-My web site
+My web site http://git.johnrnelson.com/
+
+
+
 
 
 # Changes
