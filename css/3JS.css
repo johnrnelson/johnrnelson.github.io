@@ -1,0 +1,107 @@
+ 
+body {
+   margin: 0;
+   padding: 0;
+   cursor: default;
+   font-family: 'Abel', sans-serif;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   overflow: hidden;
+}
+  
+canvas{
+   z-index:-20;
+   position: absolute;
+   left:0;
+   top:0;
+   background:transparent;
+}
+
+
+htmldisplay {
+   background:transparent;
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   /*height:100%;*/
+   /*width:100%;*/
+   /*overflow:hidden;*/
+}
+
+nonscroll {
+   position: absolute;
+   /*height: 230px;*/
+   top: 0;
+   bottom:0;
+   left: 0;
+   width:200px;
+   /*right: 0;*/
+   /*bottom:0;*/
+   display: block;
+   overflow: hidden;
+   /*border: solid 3px green;*/
+}
+
+/*nonscroll left {*/
+/*   display: block;*/
+/*   position: absolute;*/
+/*   left: 0;*/
+/*   top: 0;*/
+   
+/*}*/
+
+nonscroll img {
+   display: block;
+   position: absolute;
+   top: -20px;
+}
+
+
+nonscroll info {
+   display: block;
+   position: absolute;
+   top: 210px;
+   color: blue;
+   width: 185px;
+   /*border:solid 2px gold;*/
+   font-family: 'Roboto', sans-serif;
+   text-align: center
+}
+ 
+nonscroll info .myname {
+   display: block;
+   color:black;
+}
+nonscroll info .myemail {
+   display: block;
+   color:blue;
+}
+
+/*no scroll*/
+
+nonscroll img {
+   /*position: absolute;*/
+   /*left:0;*/
+   /*top:0;*/
+}
+
+scrolling {
+   position: absolute;
+   /*top: 230px;*/
+   top: 0;
+   left: 200px;
+   right: 0;
+   bottom: 0;
+   display: block;
+   overflow: auto;
+   /*border: solid 3px blue;*/
+   padding:15px;
+}
