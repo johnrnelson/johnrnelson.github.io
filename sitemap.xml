@@ -3,23 +3,12 @@
   <url>
     <loc>https://www.johnrnelson.com/</loc>
     <priority>1.0</priority>
-    <lastmod>2016-12-16T16:26:55+00:00</lastmod>
+    <lastmod>2017-12-6T16:26:55+00:00</lastmod>
     <image:image>
       <image:loc>https://www.johnrnelson.com/imgs/mymugshot_reg.png</image:loc>
       <image:caption>John Nelson</image:caption>
     </image:image>
   </url>
-  <url>
-    <loc>https://desktop.johnrnelson.com</loc>
-    <lastmod>2016-12-16T16:26:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://blog.johnrnelson.com</loc>
-    <lastmod>2016-12-16T16:26:55+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  
   
 </urlset>
