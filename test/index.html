@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+test<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,77 +56,16 @@
 
 </head>
 <body>
-    <center class="backdrop" itemscope itemtype="http://schema.org/Person">
-        <img itemprop="image" src="http://www.johnrnelson.com/imgs/mymugshot_reg.png">
-        <name itemprop="name" >John R Nelson</name>
-
-        <desc itemprop="disambiguatingDescription">Software engineer living in the Pacific Northwest specializing in client/server development using JavaScript and
-            <a target="_blank" href="https://nodejs.org/en/">Node.js.</a>
-        </desc>
-        <br>
-
-
-
-        <smalldisplay>
  
-            <a target="_blank" title="GitHub" itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;
-            
-            <br>
-            <a target="_blank" title="Email" itemprop="email" href="mailto:me@johnrnelson.com">me@johnrnelson.com</a>
-
-        </smalldisplay>
-
-
-
-        <largedisplay>
-
-            <div xxclass="container-fluid">
-
- 
-
-                <linkz>
-                    <icon>
-                        <a target="_blank" title="GitHub" itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a>
-                    </icon>
-                    <linkinfo>
-
-                        <title>
-                            GitHub
-                        </title>
-                        <desc>
-                            Most of my work is done on private projects.
-                        </desc>
-                    </linkinfo>
-                </linkz>
+    <script src="//hookui.tekosi.com/js/HookUI.js"></script>
+    <div id="hookuiContactForm" name="hookuiContactForm"
+        ns="ContactForm",
+        js="apps/forms/ContactForm.js"></div>  
+    <script> 
+        HookUI.UI.Build('hookuiContactForm');
+    </script>
 
 
-         
-
-                <linkz>
-                    <icon>
-                     
-                        <a target="_blank" title="Email" itemprop="email" href="mailto:me@johnrnelson.com"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
-
-                    </icon>
-                    <linkinfo>
-
-                        <title>
-                            Email
-                        </title>
-                        <desc>
-                        Send me a note by emailing 
-                        <a target="_blank" title="Email" itemprop="email" href="mailto:me@johnrnelson.com">me@johnrnelson.com</a>.
-                        </desc>
-                    </linkinfo>
-                </linkz>
-
-
-
-            </div>
-
-        </largedisplay>
-
-    </center>
 
 </body>
 
