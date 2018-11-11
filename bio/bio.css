@@ -4,6 +4,25 @@
     font-family: 'PT Sans', sans-serif;
     
 }
+/* Set panel styles.. */
+.panel {
+    background: transparent;
+    color: gray;
+    padding: 5px;
+    background: -webkit-radial-gradient(center, ellipse cover, #f2f2f2 0%, #e6e6e6 100%);
+}
+
+.panel-body-title {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+.panel-summary{
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;   
+    color:rgb(40, 0, 77); 
+    
+}
 
 .HistoryRowHeader {
     color: black;
@@ -50,18 +69,6 @@
     font-size: 12px;
 }
 
-.panel {
-    background: transparent;
-    color: gray;
-    padding: 5px;
-    background: -webkit-radial-gradient(center, ellipse cover, #f2f2f2 0%, #e6e6e6 100%);
-}
-
-.panel-body-title {
-    color: black;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-}
 
 /* Skills styles */
 
