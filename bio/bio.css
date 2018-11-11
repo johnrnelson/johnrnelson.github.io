@@ -1,0 +1,78 @@
+.body {
+    overflow: auto;
+    padding: 25px; 
+    font-family: 'PT Sans', sans-serif;
+    
+}
+
+.HistoryRowHeader {
+    color: black;
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;
+    padding-bottom: 2em;
+}
+
+.HistoryRowWhenWhere {
+    color: darkblue;
+    vertical-align: text-top;
+    width: 150px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 9px;
+    padding-bottom: 2em;
+}
+
+.HistoryTDDesc {
+    vertical-align: text-top;
+    color: lightblue;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+}
+
+.HistoryTDTech {
+    vertical-align: text-top;
+    color: black;
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+}
+
+.HistoryDivDuty {
+    vertical-align: text-top;
+    color: #333333;
+    padding-bottom: 2em;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+}
+
+.HistorySpanTech {
+    vertical-align: text-top;
+    color: black;
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+}
+
+.panel {
+    background: transparent;
+    color: gray;
+    padding: 5px;
+    background: -webkit-radial-gradient(center, ellipse cover, #f2f2f2 0%, #e6e6e6 100%);
+}
+
+.panel-body-title {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* Skills styles */
+
+.SkillHead {
+    color: rgb(83, 83, 83);
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.SkillBody {
+    color: rgb(131, 131, 131);
+    font-size: 14px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
