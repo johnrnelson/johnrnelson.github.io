@@ -50,6 +50,32 @@
     
 }
 
+.HistoryRowWhenWhere .HistoryYear{
+    color:black;
+    margin:0;
+    padding:0;
+}
+
+.HistoryRowWhenWhere .HistoryLoc{
+    color:brown;
+    margin:0;
+    padding:0;
+    font-variant: small-caps;
+}
+.HistoryRowWhenWhere .HistoryCompany{
+    color:blue;
+    margin:0;
+    padding:0;
+    font-variant: small-caps;
+}
+.HistoryRowWhenWhere .HistoryTitle{
+    color:rgb(0, 59, 0);
+    margin:0;
+    padding:0;
+    font-variant: small-caps;
+}
+
+
 .HistoryTDDesc {
     vertical-align: text-top;
     color: lightblue;
@@ -87,6 +113,7 @@
     padding-top: 15px;
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
+    
 }
 
 .SkillBody {
