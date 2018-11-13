@@ -23,7 +23,7 @@
     font-size: 20px;
     font-weight: bold;
     text-shadow: 1px 1px #ffffff;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .panel-summary {
@@ -60,7 +60,7 @@
 }
 
 .HistoryRowWhenWhere .HistoryLoc {
-    color: brown;
+    color: rgb(32, 32, 32);
     margin: 0;
     padding: 0;
     font-variant: small-caps;
