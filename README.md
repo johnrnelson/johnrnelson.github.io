@@ -5,7 +5,6 @@
  on the server. However, you will find some interesting client scripts 
  and this provides a great bucket to put my resume files into.
 
-The [Notes](https://github.com/johnrnelson/johnrnelson.github.io/tree/master/notes) section has 
-the latest information.
-
+The [Notes](https://github.com/johnrnelson/johnrnelson.github.io/tree/master/notes) section 
+more information.
  
