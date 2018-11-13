@@ -1,2 +1,2 @@
 # Cascading Style Sheets
-Use this folder to style the mark up in the HTML.
+All of the styles in this folder were created by me for this site.
