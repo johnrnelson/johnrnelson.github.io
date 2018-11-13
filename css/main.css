@@ -9,9 +9,7 @@ body {
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   /*height: 100%;*/
-   /*width: 100%;*/
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 }
 
 name {
@@ -43,10 +41,8 @@ div {
    color: #333333;
 }
 
-a {
-   /*font-family: 'Roboto', sans-serif;*/
+a { 
    color:black;
-   /* font-size: 25px; */
 }
 
 
@@ -112,8 +108,7 @@ linkz linkinfo {
    display: block;
    position: relative;
    left: 80px;
-   right: 0;
-   /*border:solid 1px silver;*/
+   right: 0; 
 }
 
 linkz linkinfo title {
@@ -124,11 +119,8 @@ linkz linkinfo title {
 }
 
 linkz linkinfo desc {
-   display: block;
-   /*display: inline;*/
-   /*position: relative;*/
-   position: relative;
-   /*position: inline;*/
+   display: block; 
+   position: relative; 
    font-family: 'Abel', sans-serif;
    font-size: 22px;
    color: black;

@@ -1,5 +1,4 @@
-# ME
-<img itemprop="image" src="imgs/mymugshot_reg.png">
+ <img itemprop="image" src="imgs/mymugshot_reg.png">
  
 # My Web Site
 This is the source code to my web site https://www.johnrnelson.com/
