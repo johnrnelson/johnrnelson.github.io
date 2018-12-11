@@ -65,6 +65,7 @@
     color: black;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .HistoryRowWhenWhere .HistoryLoc {
@@ -72,14 +73,17 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
-    text-decoration:none;    
+    text-decoration:none;  
+    white-space: nowrap;  
 }
+ 
 
 .HistoryRowWhenWhere .HistoryCompany {
     color: rgb(0, 0, 124);
     margin: 0;
     padding: 0;
     font-variant: small-caps;
+    white-space: nowrap;
 }
 
 .HistoryRowWhenWhere .HistoryTitle {
@@ -87,6 +91,7 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
+    white-space: nowrap;
 }
 
 .HistoryTDDesc {
