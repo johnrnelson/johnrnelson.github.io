@@ -65,7 +65,7 @@
     color: black;
     margin: 0;
     padding: 0;
-    cursor: help;
+    cursor: pointer;
 }
 
 .HistoryRowWhenWhere .HistoryLoc {
