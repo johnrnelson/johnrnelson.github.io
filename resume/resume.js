@@ -10,7 +10,7 @@ window.onload = function () {
  
     for (let index = 0; index < wrkDates.length; index++) {
         const wrkDt = wrkDates[index];
-        const dtsAry = wrkDt.innerText.split("-");        
-        wrkDt.title = "" + moment(new Date("01/01/" + dtsAry[1])).fromNow();
+        const dtsAry = wrkDt.innerText.split('-');                
+        wrkDt.innerHTML += '<span style="color:gray"> (' + moment(new Date('01/01/' + dtsAry[1])).fromNow() + ')<span>';
     }
 };
