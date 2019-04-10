@@ -6,21 +6,18 @@
     <title>John R Nelson</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description"
-        content="My home on the internet where I explore new technology and proof my concepts in a meaning and hopefully useful way.">
-    <meta name="keywords"
-        content="john, nelson, john r nelson, kingduck, software, engineer, oregon, node, nodejs, HTML, CSS, XML, HTML, XHTML, JavaScript, linux, client, server, web, http">
+    <meta name="description" content="My home on the internet where I explore new technology and proof my concepts in a meaning and hopefully useful way.">
+    <meta name="keywords" content="john, nelson, john r nelson, kingduck, software, engineer, oregon, node, nodejs, HTML, CSS, XML, HTML, XHTML, JavaScript, linux, client, server, web, http">
     <meta name="author" content="John R Nelson">
     <meta property="og:url" content="https://www.johnrnelson.com/" />
     <meta property="og:image" content="https://www.johnrnelson.com/imgs/mymugshot_reg.png" />
     <meta property="og:title" content="John Nelson" />
-    <meta property="og:description"
-        content="My home on the internet where I explore new technology and proof my concepts in a meaning and hopefully useful way." />
+    <meta property="og:description" content="My home on the internet where I explore new technology and proof my concepts in a meaning and hopefully useful way." />
     <meta name="msvalidate.01" content="7CCE1E476A8E96B663FF12D068836180" />
     <script>
-        (function (i, s, o, g, r, a, m) {
+        (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
+            i[r] = i[r] || function() {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -58,13 +55,16 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
-
 <body>
-
-    <div>Simple testing code for various projects...</div>
  
-    <a href="forms.html">Forms Testing</a>
-    <a href="api-tek.html">API Testing</a>
+    <script src="//hookui.tekosi.com/js/HookUI.js"></script>
+    <div id="hookuiContactForm" name="hookuiContactForm"
+        ns="ContactForm",
+        js="apps/forms/ContactForm.js"></div>  
+    <script> 
+        HookUI.UI.Build('hookuiContactForm');
+    </script>
+
 
 
 </body>
