@@ -61,37 +61,38 @@
 
 <body>
 
-    <div>Simple test for demo.tektology.com</div>
-    <div id="ExampleOutput"></div>
+    <div class="container">
+        <div>Simple test for demo.tektology.com</div>
+        <div id="ExampleOutput"></div>
 
-    <script>
-        var url = 'https://demo.tektology.com/';
+        <script>
+            var url = 'https://demo.tektology.com/';
 
-        fetch(url, {
-            method: "PUT", // *GET, POST, PUT, DELETE, etc.
-            mode: "cors", // no-cors, cors, *same-origin
-            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: "omit", // include, *same-origin, omit
-            headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "*",
-            },
-            redirect: "follow", // manual, *follow, error
-            referrer: "no-referrer", // no-referrer, *client
-            body: JSON.stringify({ "service": "time" }), // body data type must match "Content-Type" header
-        }).then(response => response.json()).then(JSONData => {
-            console.info('This is the result of the request!');
-            console.log(JSONData);
-            debugger;
-            const outElement = document.getElementById('ExampleOutput');
-            outElement.innerHTML = JSON.stringify(JSONData);
-
-
-        }); // parses JSON response into native Javascript objects 
-    </script>
+            fetch(url, {
+                method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, cors, *same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: "omit", // include, *same-origin, omit
+                headers: {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Headers": "*",
+                },
+                redirect: "follow", // manual, *follow, error
+                referrer: "no-referrer", // no-referrer, *client
+                body: JSON.stringify({ "service": "time" }), // body data type must match "Content-Type" header
+            }).then(response => response.json()).then(JSONData => {
+                console.info('This is the result of the request!');
+                console.log(JSONData);
+                debugger;
+                const outElement = document.getElementById('ExampleOutput');
+                outElement.innerHTML = JSON.stringify(JSONData);
 
 
+            }); // parses JSON response into native Javascript objects 
+        </script>
+
+    </div>
 
 </body>
 
