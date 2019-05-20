@@ -47,7 +47,7 @@
     color: black;
     font-family: 'Abel', sans-serif;
     padding-bottom: 10px;
-    border-top: solid 1px rgb(214, 214, 214);
+    /* border-top: solid 1px rgb(214, 214, 214); */
 }
 
 .HistoryRowWhenWhere {
@@ -75,7 +75,7 @@
     padding: 0;
     font-variant: small-caps;
     text-decoration:none;  
-    white-space: nowrap;  
+    /* white-space: nowrap;   */
 }
  
 
@@ -84,7 +84,7 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .HistoryRowWhenWhere .HistoryTitle {
@@ -92,7 +92,7 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .HistoryTDDesc {
