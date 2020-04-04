@@ -1,2 +1,6 @@
 # Server List
-GitHub is the only public server right now.
+
+(TEKTOLOGY Web Site)[https://www.tektology.com/]
+
+
+(TEKTOLOGY API Demo)[https://api.tektology.com/]
