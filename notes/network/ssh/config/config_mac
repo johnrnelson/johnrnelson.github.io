@@ -1,0 +1,23 @@
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+
+# Local Servers....
+Host jessica
+    HostName 192.168.6.67 
+    #Port 22
+    User goofy
+    IdentityFile  ~/.ssh/id_rsa
+    ForwardX11 yes
+    ForwardAgent yes
+    ForwardX11Trusted yes
+    LocalForward 3306 127.0.0.1:3306
+    XAuthLocation /opt/X11/bin/xauth
+
+# GitHub accounts....
+Host CheckOffClient
+    HostName github.com
+    Port 22
+    User git
+    IdentityFile  ~/.ssh/CheckOffClient_rsa
+    IdentitiesOnly yes
