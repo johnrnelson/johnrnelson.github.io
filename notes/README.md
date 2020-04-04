@@ -1,5 +1,8 @@
-# Up-to-date Notes
-I'll try to get this updated. :-)
+# Notes
+
+This folder contains information needed to connect to 
+servers and establish communication between them. 
+
 
 
 # Index  
