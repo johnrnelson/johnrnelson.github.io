@@ -1,4 +1,4 @@
- <img itemprop="image" src="imgs/mymugshot_reg.png">
+ <center><img itemprop="image" src="imgs/mymugshot_reg.png"></center>
  
 # My Web Site
  This is my website that is hosted by GitHub so there is nothing dynamic 
@@ -6,5 +6,5 @@
  and this provides a great bucket to put my resume files into.
 
 The [Notes](https://github.com/johnrnelson/johnrnelson.github.io/tree/master/notes) section 
-more information.
+more information if you are not interested in the code. :smiley:	
  
