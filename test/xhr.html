@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <title>TEST XHR</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+      <script src="../js/WebApp.js"></script>
+</head>
+
+<body>
+      <div>
+            TEST XHR!
+      </div>
+      <textarea id="result" rows="40" cols="50" style="width:100%"></textarea>
+      <script>
+            function StripNewLine(Line2Strip) {
+                  return Line2Strip.replace(/(?:\r\n|\r|\n)/g, 'xxx');
+            }
+
+            WebApp.xhr("GET", "/resume/index.html", "", function (error, data) {
+                  if (error) {
+                        console.warn(error);
+                  } else {
+                        const WorkHistory = [];
+                        try {
+
+                              // console.dir(xhrDATA);
+                              const ELParser = document.createElement("div");
+                              ELParser.innerHTML = data;
+                              const headers = ELParser.querySelectorAll("div.row.HistoryRowHeader");
+                              // debugger;
+
+
+                              headers.forEach(head => {
+                                    const headOBJ = {};
+                                    // console.log(head.children[0]);
+                                    headOBJ.year = StripNewLine(head.children[0].querySelector(".HistoryYear").textContent);
+
+                                    headOBJ.company = StripNewLine(head.children[0].querySelector(".HistoryCompany").textContent);
+                                    if (headOBJ.company == "Nori Dren") {
+                                          // debugger;
+                                    }
+                                    headOBJ.year = StripNewLine(head.children[0].querySelector(".HistoryTitle").textContent);
+                                    headOBJ.loc = StripNewLine(head.children[0].querySelector(".HistoryLoc").innerText);
+
+                                    headOBJ.duties = [];
+
+                                    const duties = head.children[1].querySelectorAll(".HistoryDivDuty");
+                                    duties.forEach(duty => {
+                                          headOBJ.duties.push(StripNewLine(duty.textContent.trim()));
+                                    });
+
+                                    WorkHistory.push(headOBJ);
+                                    // console.log(headOBJ);
+                                    // console.log(head.children[1]);
+                              });
+
+                        } catch (errJSON) {
+                              console.warn("\r\n\r\nbad JSON -->", errJSON);
+                        }
+
+                        document.getElementById("result").innerHTML = JSON.stringify(WorkHistory, null, "\t");
+
+                  }
+                  //    debugger;
+            });
+            function GetData() {
+
+                  WebApp.xhr("GET", "/data/resume.json", "", function (error, data) {
+                        if (error) {
+                              console.warn(error);
+                        } else {
+                              try {
+                                    const xhrDATA = JSON.parse(data);
+                                    console.dir(xhrDATA);
+                                    document.getElementById("result").innerHTML = JSON.stringify(xhrDATA, null, "\t");
+
+                              } catch (errJSON) {
+                                    console.warn("bad JSON -->", data);
+                              }
+
+                        }
+                        //    debugger;
+                  });
+            }
+      </script>
+</body>
+
+</html>

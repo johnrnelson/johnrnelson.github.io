@@ -1,0 +1,22 @@
+{
+      "person": "John R. Nelson",
+      "Skills": [
+            {
+                  "TODO": "FIX ME"
+            }
+      ],
+      "history": [
+            {
+                  "start_year": "2014",
+                  "end_year": "",
+                  "organization":"TEKTOLOGY LLC",
+                  "title":"Partner / Owner",
+                  "google_map":"xxx",
+                  "duties":[
+                        {
+
+                        }
+                  ]
+            }
+      ]
+}
