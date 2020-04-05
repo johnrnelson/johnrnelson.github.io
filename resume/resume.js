@@ -8,23 +8,37 @@
 */
 function NewHistoryElement(HistoryInformation) {
     // console.log(HistoryInformation);
+    var DutyHTMLItems = [];
+    for (let index = 0; index < HistoryInformation.duties.length; index++) {
+        const element = HistoryInformation.duties[index];
+        DutyHTMLItems.push(`<div class="HistoryDivDuty">${element}</div>`);
+    }
+ 
 
+    var TargetEndYear = parseInt(HistoryInformation.YearEnd);
+
+    if (!TargetEndYear) {
+        TargetEndYear = moment(new Date()).fromNow();
+    } else {
+        TargetEndYear = moment(new Date('01/01/' + TargetEndYear)).fromNow();
+    }
+    /*
+    moment(new Date('01/01/' + HistoryInformation.YearStart)).fromNow()
+    */
     const HistoryElement = `
  
         <div class="col-md-4 HistoryRowWhenWhere">
-            <span class="HistoryYear">${HistoryInformation.YearStart}-2015</span><br>
+            <span class="HistoryYear">
+            ${HistoryInformation.YearStart}-2015</span><br>
+            <span style="color:gray">${TargetEndYear}<span>
+            <br>
             <span class="HistoryCompany">${HistoryInformation.Company}</span><br>
             <span class="HistoryTitle">${HistoryInformation.Title}</span><br>
             <a title="Click to see map" class="HistoryLoc" target="_blank"
-                    href="${HistoryInformation.LocationHref}">${HistoryInformation.Location}"</a>
+                    href="${HistoryInformation.LocationHref}">${HistoryInformation.Location}</a>
         </div>
         <div class="col-md-8 HistoryTDDesc">
-            <div class="HistoryDivDuty">
-                    Design, code, debug, and publish custom applications for clients.
-            </div>
-            <div class="HistoryDivDuty">
-                    Product development and proof of concepts.
-            </div>
+            ${DutyHTMLItems.join('')}
         </div>
   
     `;
@@ -35,45 +49,37 @@ function NewHistoryElement(HistoryInformation) {
 
 
 function GetWorkHistory() {
-
-    // WebApp.xhr("GET", "/data/resume/resume.json", "", function (error, data) {
     WebApp.xhr("GET", "/data/resume/work_history.json", "", function (error, data) {
         if (error) {
             console.warn(error);
         } else {
             const resume_history = document.getElementById("resume_history");
-            resume_history.innerHTML = "<hr><hr>";
-
-
+ 
             try {
                 const xhrDATA = JSON.parse(data);
 
                 console.dir(xhrDATA);
                 for (let index = 0; index < xhrDATA.history.length; index++) {
-                    const element = xhrDATA.history[index];
-                    // const doh = NewHistoryElement(element);
-                    // console.info(doh);
+                    const element = xhrDATA.history[index]; 
                     const NewRow = document.createElement("div");
                     NewRow.className = "row HistoryRowHeader";
                     NewRow.innerHTML = NewHistoryElement(element);
-
                     resume_history.appendChild(NewRow);
-
-
                 }
 
-                // resume_history.innerHTML = "DEBUG!!!";
-                // document.getElementById("result").innerHTML = JSON.stringify(xhrDATA, null, "\t");
 
-            } catch (errJSON) {
-                console.warn("bad JSON -->", data);
+            } catch (errParseData) {
+                console.warn("\r\nGetWorkHistory ERROR -->", errParseData);
             }
 
-        }
-        //    debugger;
+        }//End xhr valid request....
     });
 }
 
+
+/*
+    When the browser if ready it will fire off this bad boy...
+*/
 window.onload = function () {
 
 
@@ -81,6 +87,8 @@ window.onload = function () {
         debugger;
     }
     GetWorkHistory();
+
+    return;
 
     /*
         Show the years for the dates in the work history...
@@ -100,4 +108,5 @@ window.onload = function () {
         }
 
     }
+
 };
