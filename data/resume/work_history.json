@@ -1,0 +1,248 @@
+{
+      "history": [
+            {
+                  "YearStart": "2014",
+                  "YearEnd": "Today",
+                  "Company": "TEKTOLOGY LLC",
+                  "Title": "Partner / Owner",
+                  "Location": "Eugene, OR ",
+                  "LocationHref": "https://www.google.com/maps/place/Eugene,+OR/data=!4m2!3m1!1s0x54c119b0ac501919:0x57ec61894a43894d?sa=X&ved=2ahUKEwjPjdjf4aXiAhWLLHwKHe4bAwgQ8gEwAHoECAoQAQ",
+                  "duties": [
+                        "Design, code, debug, and publish custom applications for clients.",
+                        "Product development and proof of concepts."
+                  ]
+            },
+            {
+                  "YearStart": "2006",
+                  "YearEnd": "2013",
+                  "Company": "LifePoint Hospitals",
+                  "Title": "Senior Manager Software Architect",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Design, code, debug, and publish Enterprise class framework for internally developed applications.",
+                        "Create business driven software for collecting, reporting, and automating information using classic client/server, n-Tier, web applications, command line tools and utilities.",
+                        "Build software development standards and guidelines for well written applications using modern design patterns and common sense strategy. Encourage proper software engineering practices while leading by example and practicing appropriate engineering discipline."
+                  ]
+            },
+            {
+                  "YearStart": "2006",
+                  "YearEnd": "2006",
+                  "Company": "Jackson Automotive Group",
+                  "Title": "Software Engineer",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Create public internet web site with Microsoft SQL Server backend to allow vehicle inventory to be displayed and managed.",
+                        "Create admin application to modify the inventory list and site data while also processing uploaded images to display on web site."
+                  ]
+            },
+            {
+                  "YearStart": "2005",
+                  "YearEnd": "2006",
+                  "Company": "HCA/CPI",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Support team development of company intranet Web Applications for online Tax Management"
+                  ]
+            },
+            {
+                  "YearStart": "2005",
+                  "YearEnd": "2005",
+                  "Company": "Boswell Consulting",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Convert an existing VB 6 Client/Server application to c# ASP.NET."
+                  ]
+            },
+            {
+                  "YearStart": "2002",
+                  "YearEnd": "2004",
+                  "Company": "HCA/Shawn Lee LLC",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Support team development of company intranet Web Applications for online Physician Practice Management."
+                  ]
+            },
+            {
+                  "YearStart": "2001",
+                  "YearEnd": "2002",
+                  "Company": "Kroger/TEKsystems",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Nashville, TN",
+                  "LocationHref": "https://www.google.com/maps/place/Nashville,+TN/@36.186314,-87.0654317,10z/data=!3m1!4b1!4m5!3m4!1s0x8864ec3213eb903d:0x7d3fb9d0a1e9daa0!8m2!3d36.1626638!4d-86.7816016",
+                  "duties": [
+                        "Design and build security framework for both web and VB clients to support IPC from multiple platforms such as Win32 applications and Internet Explorer clients.",
+                        "Build web development framework to allow code reuse and standardize future development.",
+                        "Assisted transition from Microsoft ASP to IBM WebSphere."
+                  ]
+            },
+            {
+                  "YearStart": "1999",
+                  "YearEnd": "2001",
+                  "Company": "SurfMonkey / Scapeware",
+                  "Title": "Senior Software Engineer",
+                  "Location": "San Jose, California",
+                  "LocationHref": "https://www.google.com/maps/place/San+Jose,+CA/@37.296933,-121.9574972,11z/data=!3m1!4b1!4m5!3m4!1s0x808fcae48af93ff5:0xb99d8c0aca9f717b!8m2!3d37.3382082!4d-121.8863286",
+                  "duties": [
+                        "Developed on-line bulletin boards for the user community. Board features include the standard board functionality such as Board, Topic, and Message storing plus a back-end auditing tool for reviewing content for child safety. All topics and boards went through the review process that I designed and coded from scratch.",
+                        "Developed on-line email system to provide parental blocking. This email system was not just a POP relay, rather, a layer between the POP server and the client. All email was stored in an SQL server database to allow searching, post-routing, filtering, and event logging for proof of actions. This allowed us to help protect children from unsafe scripts, unknown contacts, or persons not on a 'buddy list'.",
+                        "Developed a web crawler to seek out both good web sites that kids can go to that are safe for children in the designated age group and bad sites such as pornography to build a URL database that gave the content advisors the ability to inspect and edit possible web destinations for the child users.",
+                        "Developed a tool to publish HTML pages from development to production servers and check differences between the two."
+                  ]
+            },
+            {
+                  "YearStart": "1999",
+                  "YearEnd": "1999",
+                  "Company": "Fleamarket.com / Scapeware",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Tampa, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/Tampa,+FL/@27.9944116,-82.5943657,11z/data=!3m1!4b1!4m5!3m4!1s0x88c2b782b3b9d1e1:0xa75f1389af96b463!8m2!3d27.950575!4d-82.4571776",
+                  "duties": [
+                        "Install and support back-end servers.",
+                        "Built prototype for on-line flea market e-commerce web application."
+                  ]
+            },
+            {
+                  "YearStart": "1998",
+                  "YearEnd": "1999",
+                  "Company": "FinTech / Scapeware",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Tampa, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/Tampa,+FL/@27.9944116,-82.5943657,11z/data=!3m1!4b1!4m5!3m4!1s0x88c2b782b3b9d1e1:0xa75f1389af96b463!8m2!3d27.950575!4d-82.4571776",
+                  "duties": [
+                        "Created VB front-end to convert data files in various formats to ISO-9000 formats for processing in a backend database that was determined by client."
+                  ]
+            },
+            {
+                  "YearStart": "1998",
+                  "YearEnd": "1999",
+                  "Company": "Cognitive / Scapeware",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Chicago, Illinois",
+                  "LocationHref": "https://www.google.com/maps/place/Chicago,+IL/@41.8336478,-87.8720476,11z/data=!3m1!4b1!4m5!3m4!1s0x880e2c3cd0f4cbed:0xafe0a6ad09c0c000!8m2!3d41.8781136!4d-87.6297982",
+                  "duties": [
+                        "Advised on coding standards for development, built prototypes of applications for proof of concept, and helped create program models for telephone companies managing POTS lines."
+                  ]
+            },
+            {
+                  "YearStart": "1998",
+                  "YearEnd": "1998",
+                  "Company": "Eckerd Corporation",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "St. Petersburg, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/St.+Petersburg,+FL/@27.7786988,-82.7949058,11z/data=!3m1!4b1!4m5!3m4!1s0x88c2e663693aaa41:0x4cc4003bcd48bff!8m2!3d27.7676008!4d-82.6402915",
+                  "duties": [
+                        "Designed and supported intranet development for inter-office applications such as sales receipts and Microsoft Word Document management."
+                  ]
+            },
+            {
+                  "YearStart": "1998",
+                  "YearEnd": "1999",
+                  "Company": "Intermedia / DMR",
+                  "Title": "Application Developer / Contractor",
+                  "Location": "Tampa, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/Tampa,+FL/@27.9944116,-82.5943657,11z/data=!3m1!4b1!4m5!3m4!1s0x88c2b782b3b9d1e1:0xa75f1389af96b463!8m2!3d27.950575!4d-82.4571776",
+                  "duties": [
+                        "Developed a reporting tool in Microsoft Access for managing phone records. The tool outgrew Access as a database so the tables were moved to Oracle while keeping the forms and client code in Access.",
+                        "Developed a documentation tool to search and catalog the network for Access MDB files to report table information such as field definitions, number of records, and owner of database.",
+                        "Developed Exchange solution to email Microsoft Excel Spreadsheets that raised application errors due to company-defined validations and program errors.",
+                        "Developed Microsoft Word Templates using VBA to create on-line forms for both management and end users."
+                  ]
+            },
+            {
+                  "YearStart": "1997",
+                  "YearEnd": "1998",
+                  "Company": "Ryder Trucking Company / Metro",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Jacksonville, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/Jacksonville,+FL/@30.3446913,-81.9632959,10z/data=!3m1!4b1!4m5!3m4!1s0x88e5b716f1ceafeb:0xc4cd7d3896fcc7e2!8m2!3d30.3321838!4d-81.655651",
+                  "duties": [
+                        "Created Excel reporting tool for management in the financial department to aggregate individual reports built by the analysts."
+                  ]
+            },
+            {
+                  "YearStart": "1997",
+                  "YearEnd": "1998",
+                  "Company": "AllTell / Metro",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Jacksonville, Florida",
+                  "LocationHref": "https://www.google.com/maps/place/Jacksonville,+FL/@30.3446913,-81.9632959,10z/data=!3m1!4b1!4m5!3m4!1s0x88e5b716f1ceafeb:0xc4cd7d3896fcc7e2!8m2!3d30.3321838!4d-81.655651",
+                  "duties": [
+                        "Worked in a team of over 100 VB developers to build and maintain a loan processing application. This application had so many VB DLL's that it exceeded the sub-projects allowed by VB."
+                  ]
+            },
+            {
+                  "YearStart": "1997",
+                  "YearEnd": "1998",
+                  "Company": "Nori Dren",
+                  "Title": "Shared Owner",
+                  "Location": "Richmond, VA",
+                  "LocationHref": "https://www.google.com/maps/place/Richmond,+VA/@37.5246403,-77.5633014,12z/data=!3m1!4b1!4m5!3m4!1s0x89b111095799c9ed:0xbfd83e6de2423cc5!8m2!3d37.5407246!4d-77.4360481",
+                  "duties": [
+                        "Created E-Forms for a construction company to allow automation of processing new construction requests.",
+                        "Created Access database for inventory of construction materials.",
+                        "Supported Windows 95 clients on the Novell network."
+                  ]
+            },
+            {
+                  "YearStart": "1997",
+                  "YearEnd": "1997",
+                  "Company": "Virginia State / Metro Consulting",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Richmond, VA",
+                  "LocationHref": "https://www.google.com/maps/place/Richmond,+VA/@37.5246403,-77.5633014,12z/data=!3m1!4b1!4m5!3m4!1s0x89b111095799c9ed:0xbfd83e6de2423cc5!8m2!3d37.5407246!4d-77.4360481",
+                  "duties": [
+                        "Developed Performance Measure reporting using OLE automation from Microsoft Access to Microsoft Word for the State of Virginia."
+                  ]
+            },
+            {
+                  "YearStart": "1996",
+                  "YearEnd": "1997",
+                  "Company": "Massey Coal / Metro Consulting",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Richmond, VA",
+                  "LocationHref": "https://www.google.com/maps/place/Richmond,+VA/@37.5246403,-77.5633014,12z/data=!3m1!4b1!4m5!3m4!1s0x89b111095799c9ed:0xbfd83e6de2423cc5!8m2!3d37.5407246!4d-77.4360481",
+                  "duties": [
+                        "Developed automated reporting from AS/400 using Microsoft Visual Basic, ODBC, and Rumba. Created reports in Microsoft Access using Microsoft Visual Basic 4.0 as front-ends. Developed Intranet standards for TCP/IP work group applications.",
+                        "Refined company programming standards for Microsoft Visual Basic to meet Microsoft's coding standards.",
+                        "Created several Internet applications to include Web browsers, FTP clients, Telnet clients, and automated BOTS.",
+                        "Created ActiveX Documents for presentations of web capabilities and proof of concept for new application development models.",
+                        "Created rich web pages delivering sound, animation, and dynamic content using ActiveX controls for the company intranet.",
+                        "Developed and implemented Microsoft Word templates for company wide adoption of E-Forms.",
+                        "Built reports with Microsoft Visual Basic as a front-end while retrieving data through ODBC and Rumba to the AS/400 back-end"
+                  ]
+            },
+            {
+                  "YearStart": "1996",
+                  "YearEnd": "1996",
+                  "Company": "Department of Game & Fish/ Computer Consulting Group",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Richmond, VA",
+                  "LocationHref": "https://www.google.com/maps/place/Richmond,+VA/@37.5246403,-77.5633014,12z/data=!3m1!4b1!4m5!3m4!1s0x89b111095799c9ed:0xbfd83e6de2423cc5!8m2!3d37.5407246!4d-77.4360481",
+                  "duties": [
+                        "Created a population analysis system for Game and Fishery to tally deer populations and report accordingly."
+                  ]
+            },
+            {
+                  "YearStart": "1995",
+                  "YearEnd": "1996",
+                  "Company": "Virginia DMV / Computer Consulting Group",
+                  "Title": "Software Engineer / Contractor",
+                  "Location": "Richmond, VA",
+                  "LocationHref": "https://www.google.com/maps/place/Richmond,+VA/@37.5246403,-77.5633014,12z/data=!3m1!4b1!4m5!3m4!1s0x89b111095799c9ed:0xbfd83e6de2423cc5!8m2!3d37.5407246!4d-77.4360481",
+                  "duties": [
+                        "Developed an automated legislative tracking system to generate reports that were sent to the Governors office.",
+                        "Developed an Automated project tracking system to track PC application development requests as well as the project status during the system development life cycle.",
+                        "Developed a PC Inventory system to track purchased PCs as well as installation of parts.",
+                        "Created install scripts to automate Microsoft Office installations across network."
+                  ]
+            }
+      ]      
+}
