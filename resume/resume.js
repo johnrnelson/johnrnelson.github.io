@@ -16,22 +16,18 @@ function NewHistoryElement(HistoryInformation) {
  
 
     var TargetEndYear = parseInt(HistoryInformation.YearEnd);
-
-    if (!TargetEndYear) {
-        TargetEndYear = moment(new Date()).fromNow();
-    } else {
-        TargetEndYear = moment(new Date('01/01/' + TargetEndYear)).fromNow();
-    }
-    /*
-    moment(new Date('01/01/' + HistoryInformation.YearStart)).fromNow()
-    */
-    const HistoryElement = `
+    var displayYearDiff = "";
+    const today = new Date();
  
+    if (TargetEndYear) {         
+        displayYearDiff = '<span style="color:gray">' + moment(new Date('01/01/' + TargetEndYear)).fromNow() + '<span><br>';         
+    }
+ 
+    const HistoryElement = ` 
         <div class="col-md-4 HistoryRowWhenWhere">
             <span class="HistoryYear">
-            ${HistoryInformation.YearStart}-2015</span><br>
-            <span style="color:gray">${TargetEndYear}<span>
-            <br>
+            ${HistoryInformation.YearStart}-${HistoryInformation.YearEnd}</span><br>
+            ${displayYearDiff}            
             <span class="HistoryCompany">${HistoryInformation.Company}</span><br>
             <span class="HistoryTitle">${HistoryInformation.Title}</span><br>
             <a title="Click to see map" class="HistoryLoc" target="_blank"
