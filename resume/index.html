@@ -270,31 +270,7 @@
                   </p>
             </footer>
       </body>
-
-      <script>
-
-            function GetData() {
-
-                  // WebApp.xhr("GET", "/data/resume/resume.json", "", function (error, data) {
-                  WebApp.xhr("GET", "/data/resume/work_history.json", "", function (error, data) {
-                        if (error) {
-                              console.warn(error);
-                        } else {
-                              try {
-                                    const xhrDATA = JSON.parse(data);
-                                    console.dir(xhrDATA);
-                                    // document.getElementById("result").innerHTML = JSON.stringify(xhrDATA, null, "\t");
-
-                              } catch (errJSON) {
-                                    console.warn("bad JSON -->", data);
-                              }
-
-                        }
-                        //    debugger;
-                  });
-            }
-            // GetData();
-      </script>
+ 
 </body>
 
 </html>

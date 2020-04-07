@@ -1,0 +1,161 @@
+.body {
+      overflow: auto;
+      /* fixes scrollbars */
+      margin: 15px;
+      font-family: 'PT Sans', sans-serif;
+      background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+  }
+  
+  .container {
+      width: 100%;
+      margin: 5px;
+  }
+  
+  /* Set panel styles.. */
+  
+  .panel {
+      color: gray;
+      padding: 10px;
+      background: radial-gradient(#ffffff 20%, #F5F5F5 100%);
+      font-family: 'PT Sans', sans-serif;
+      font-size: 16px;
+      margin-bottom: 15px;
+      /* box-shadow: 1px 1px; */
+      border-top: solid 1px rgb(128, 127, 127);
+      border-left: solid 1px rgb(128, 127, 127);
+      border-right: solid 1px silver;
+      border-bottom: solid 1px silver;
+  }
+  
+  .panel-body-title {
+      color: black;
+      font-family: 'Abel', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px #ffffff;
+      /* padding-left: 10px; */
+  }
+  
+  .panel-summary {
+      font-family: 'Abel', sans-serif;
+      font-size: 16px;
+      color: rgb(40, 0, 77);
+      padding-bottom: 10px;
+  }
+  
+  .HistoryRowHeader {
+      color: black;
+      font-family: 'Abel', sans-serif;
+      padding-bottom: 10px;
+      /* border-top: solid 1px rgb(214, 214, 214); */
+  }
+  
+  .HistoryRowWhenWhere {
+      color: darkblue;
+      vertical-align: text-top;
+      width: 190px;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 14px;
+      padding-bottom: 2em;
+      padding-top: 6px;
+      cursor: default;
+  }
+  
+  .HistoryRowWhenWhere .HistoryYear {
+      color: rgb(65, 65, 65);
+      margin: 0;
+      padding: 0; 
+      font-family: 'Abel', sans-serif;
+      font-weight: bold;
+  }
+  
+  .HistoryRowWhenWhere .HistoryLoc {
+      color: rgb(32, 32, 32);
+      margin: 0;
+      padding: 0;
+      font-variant: small-caps;
+      text-decoration:none;  
+      /* white-space: nowrap;   */
+  }
+   
+  
+  .HistoryRowWhenWhere .HistoryCompany {
+      color: rgb(0, 0, 124);
+      margin: 0;
+      padding: 0;
+      font-variant: small-caps;
+      /* white-space: nowrap; */
+  }
+  
+  .HistoryRowWhenWhere .HistoryTitle {
+      color: rgb(0, 48, 0);
+      margin: 0;
+      padding: 0;
+      font-variant: small-caps;
+      /* white-space: nowrap; */
+  }
+  
+  .HistoryTDDesc {
+      vertical-align: text-top;        
+      padding-top: 6px;
+  }
+  
+  .HistoryTDTech {
+      vertical-align: text-top;
+      color: black;
+      font-family: 'Abel', sans-serif;
+      font-size: 12px;
+  }
+  
+  .HistoryDivDuty {
+      vertical-align: text-top;
+      color: #333333;
+      padding-bottom: 15px;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 15px;
+  }
+  
+  .HistorySpanTech {
+      vertical-align: text-top;
+      color: black;
+      font-family: 'Abel', sans-serif;
+      font-size: 12px;
+  }
+  
+  /* Skills styles */
+  
+  .SkillHead {
+      color: rgb(31, 1, 59);
+      padding-top: 15px;
+      font-size: 18px;
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .SkillBody {
+      color: rgb(97, 97, 97);
+      font-size: 14px;
+  }
+  
+  /* mcp styles */
+  .mcp{
+      padding:0;
+      margin:0;
+  }
+  .mcpExam {
+      font-size: 16px;
+      color: rgb(62, 102, 58);
+      cursor: default;
+  }
+  
+  .mcpDate {
+      font-size: 12px;
+      color: rgb(23, 0, 85);
+      cursor: default;
+      
+  }
+  
+  .mcpDesc {
+      font-size: 16px;
+      /* color: green; */
+      cursor: default;
+  }
