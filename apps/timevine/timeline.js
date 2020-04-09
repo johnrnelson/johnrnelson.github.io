@@ -9,9 +9,13 @@ window.WebTimeLine = {
       Convert: {
             DateCast(DateRecord) {
 
+                  const dateStart = DateRecord.date.YearEnd;
+                  if (!DateRecord.id){
+                        DateRecord.id = WebApp.NewID('');
+                  }
 
                   const CastRecord = {
-                        id: WebApp.NewID(''),
+                        id: DateRecord.id,
                         group: 1,
                         content: 'item ' + DateRecord.title,
                         start: '2010-04-20'
@@ -29,7 +33,7 @@ window.WebTimeLine = {
       GetData(DataURL, OnData) {
 
 
-            WebApp.xhr("GET", "/data/timeline/jrn.json", "", function (error, data) {
+            WebApp.xhr("GET", DataURL, "", function (error, data) {
                   if (error) {
                         console.warn(error);
                   } else {
@@ -53,6 +57,84 @@ window.WebTimeLine = {
 
                   }//End xhr valid request....
             });
+      },
+      AddTimeByGroup(GroupDataURL) {
+
+
+      },
+      //Build the groups you need for the time line...
+      BuildGroups(){
+
+                  // create a data set with groups
+                  var groups = new vis.DataSet();
+
+                  groups.add([
+                        {
+                              id: 411,
+                              content: "Me",
+                              // nestedGroups: [1]
+                        },
+                        {
+                              id: 4215,
+                              content: "Microsoft",
+                              nestedGroups: [71, 72, 73],
+                              showNested: true
+                        },
+                        {
+                              id: 4404,
+                              content: "OpenSource",
+                              showNested: true
+                        },
+
+                  ]);
+
+                  //Microsoft Group....
+                  groups.add([
+                        {
+                              id: 71,
+                              content: "Windows",
+                              // nestedGroups: [1]
+                        },
+                        {
+                              id: 72,
+                              content: ".Net",
+                              // nestedGroups: [55],
+                              showNested: true
+                        },
+                        {
+                              id: 73,
+                              content: "Office",
+                              showNested: true
+                        },
+
+                  ]);
+
+                  return groups;
+      },
+
+      BuildTimelineHTML(TimelineItems) {
+
+            //Remove loading...
+            // WebTimeLine.HTMLParent.Control.innerHTML = "";
+            WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
+            WebTimeLine.HTMLParent.Loading.style.display = "none";
+
+            // Configuration for the Timeline
+            var options = {
+                  // always snap to full hours, independent of the scale
+                  // snap: function (date, scale, step) {
+                  //       var hour = 60 * 60 * 1000;
+                  //       return Math.round(date / hour) * hour;
+                  // },
+                  //Need groups!
+                  // groupOrder can be a property name or a sorting function                        
+                  // groupOrder: 'content' 
+                  groupOrder: 'none'
+            };
+
+            // Create a Timeline
+            WebTimeLine.VisTimeline = new vis.Timeline(WebTimeLine.HTMLParent.Control, TimelineItems, WebTimeLine.BuildGroups(), options);
+
       }
 };
 
@@ -68,44 +150,31 @@ window.onload = function () {
             if (err) {
                   console.warn("\r\nTimeline Data Error", err);
             } else {
-                  console.dir("All JRN Data -->", time_data);
+                  console.log("All JRN Data -->", time_data);
 
-                  // create a data set with groups
-                  var groups = new vis.DataSet();
+                  console.warn("Group info still not working!");
 
-                  groups.add([
-                        {
-                              id: 411,
-                              content: "Me",
-                              // nestedGroups: [1]
-                        },
-                        {
-                              id: 4115,
-                              content: "Other",
-                              // nestedGroups: [55],
-                              showNested: true
-                        },
-                        {
-                              id: 404,
-                              content: "Alson"
-                        },
-
-                  ]);
-
+                  console.info("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
+ 
 
                   /*
                         Examples...
                   */
                   time_data.push({
                         id: 4556,
-                        group: 4115,
+                        group: 71,
                         content: 'Example A', start: '2013-04-16', end: '2013-04-19'
                   });
                   time_data.push({
                         id: 5598,
-                        group: 4115,
-                        content: 'Example B', start: '2014-04-27', type: 'point'
+                        group: 72,
+                        content: 'Microsoft Windows 1.0', start: '1992-04-27', type: 'point'
                   });
+
+                 
+                  // WebTimeLine.AddTimeByGroup(time_data,71, '/data/timeline/microsoft.json', function (err) {
+
+                  // });                  
 
                   var items = new vis.DataSet(time_data);
 
@@ -119,26 +188,7 @@ window.onload = function () {
                   */
                   console.warn('\r\n\r\nPut this in man! :-)\r\n\r\n');
 
-
-                  //Remove loading...
-                  // WebTimeLine.HTMLParent.Control.innerHTML = "";
-                  WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
-                  WebTimeLine.HTMLParent.Loading.style.display = "none";
-
-                  // Configuration for the Timeline
-                  var options = {
-                        // always snap to full hours, independent of the scale
-                        snap: function (date, scale, step) {
-                              var hour = 60 * 60 * 1000;
-                              return Math.round(date / hour) * hour;
-                        },
-                        //Need groups!
-                        groupOrder: 'content'  // groupOrder can be a property name or a sorting function                        
-                  };
-
-                  // Create a Timeline
-                  var timeline = new vis.Timeline(WebTimeLine.HTMLParent.Control, items, groups, options);
-
+                  WebTimeLine.BuildTimelineHTML(items);
             }
       });
 

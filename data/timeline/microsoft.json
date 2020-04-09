@@ -1,0 +1,52 @@
+{
+      "windows": [
+            {
+                  "id": "winOS-1",
+                  "title": "Windows 1.0",
+                  "date": {
+                        "YearStart": 1985,
+                        "YearEnd": 2001,
+                        "MonthStart": 20,
+                        "MonthEnd": 1,
+                        "DayStart": 1,
+                        "DayEnd": 1
+                  }
+            },
+            {
+                  "id": "winOS-2",
+                  "title": "Windows 2.0",
+                  "date": {
+                        "YearStart": 1987,
+                        "YearEnd": 0,
+                        "MonthStart": 12,
+                        "MonthEnd": 0,
+                        "DayStart": 9,
+                        "DayEnd": 0
+                  }
+            },
+            {
+                  "id": "winOS-3",
+                  "title": "Windows 3.0",
+                  "date": {
+                        "YearStart": 1990,
+                        "YearEnd": 0,
+                        "MonthStart": 5,
+                        "MonthEnd": 0,
+                        "DayStart": 22,
+                        "DayEnd": 0
+                  }
+            },
+            {
+                  "id": "winOS-3.1",
+                  "title": "Windows 3.11",
+                  "date": {
+                        "YearStart": 1992,
+                        "YearEnd": 0,
+                        "MonthStart": 8,
+                        "MonthEnd": 0,
+                        "DayStart": 6,
+                        "DayEnd": 0
+                  }
+            }
+      ]
+}
