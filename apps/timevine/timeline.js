@@ -93,27 +93,30 @@ window.WebTimeLine = {
 
             // Configuration for the Timeline
             var options = {
-                  max: new Date() + 30,
+                  // max: new Date() + 360,
+                  max: '2025-01-1', //Do I really need to hard code this???
                   min: '1980-01-1',
                   // zoomMax:50000,
                   // zoomMin:10000,
                   // zoomFriction:500,
                   // zoomable:false,
+
                   // always snap to full hours, independent of the scale
                   // snap: function (date, scale, step) {
                   //       var hour = 60 * 60 * 1000;
                   //       return Math.round(date / hour) * hour;
-                  // },
-                  //Need groups!
-                  // groupOrder can be a property name or a sorting function                        
-                  // groupOrder: 'content' 
+                  // }, 
+
+                  //No need to order, we do that in the code....
                   groupOrder: 'none'
             };
 
-            // Create a Timeline
-            WebTimeLine.VisTimeline = new vis.Timeline(WebTimeLine.HTMLParent.Control,
+            // Create a Timeline..
+            WebTimeLine.VisTimeline = new vis.Timeline(
+                  WebTimeLine.HTMLParent.Control,
                   TimelineItems,
-                  WebTimeLine.Groups.BuildGroups(), options);
+                  WebTimeLine.Groups.BuildGroups(),
+                  options);
 
       },
       /*
@@ -191,38 +194,44 @@ window.onload = function () {
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
 
 
-      console.info('Push all the URLS you need for the default time line...');
       
+
       //Add all the groups URLS you need to fill the time line...
       WebTimeLine.Groups.ListURLS.push('/data/timeline/jrn.json');
 
       // WebTimeLine.AddTimeByGroup(time_data, 71, '/data/timeline/microsoft.json', function (err) {
 
       // });
-    
 
+
+      console.info('Push all the URLS you need for the default time line...',WebTimeLine.Groups.ListURLS);
+
+ 
       //Load up my timeline..
       window.WebTimeLine.GetData(411, '/data/timeline/jrn.json', function (err, time_data) {
             if (err) {
                   console.warn("\r\nTimeline Data Error", err);
             } else {
                   console.log("All JRN Data -->", time_data);
-
+ 
                   console.info("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
+                  console.log("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
+                  console.info("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
+                                                      
 
 
                   /*
                         Examples...
                   */
                   time_data.push({
-                        id: 4556,
+                        id: WebApp.NewID(''),
                         group: 4404,
-                        content: 'Example A', start: '2010-04-16', end: '2013-04-19'
+                        content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
                   });
                   time_data.push({
-                        id: 5598,
-                        group: 4404,
-                        content: 'TEST POINT', start: '1992-04-27', type: 'point'
+                        id: WebApp.NewID(''),
+                        group: 411,
+                        content: 'TimeVine Proof', start: '2020-04-1', type: 'point'
                   });
 
 
