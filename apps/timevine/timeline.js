@@ -191,12 +191,15 @@ window.onload = function () {
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
 
 
+      console.info('Push all the URLS you need for the default time line...');
+      
       //Add all the groups URLS you need to fill the time line...
       WebTimeLine.Groups.ListURLS.push('/data/timeline/jrn.json');
 
       // WebTimeLine.AddTimeByGroup(time_data, 71, '/data/timeline/microsoft.json', function (err) {
 
       // });
+    
 
       //Load up my timeline..
       window.WebTimeLine.GetData(411, '/data/timeline/jrn.json', function (err, time_data) {
@@ -214,7 +217,7 @@ window.onload = function () {
                   time_data.push({
                         id: 4556,
                         group: 4404,
-                        content: 'Example A', start: '2013-04-16', end: '2013-04-19'
+                        content: 'Example A', start: '2010-04-16', end: '2013-04-19'
                   });
                   time_data.push({
                         id: 5598,
