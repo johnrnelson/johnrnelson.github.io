@@ -10,7 +10,7 @@
       /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
 }
 
-#timeline_opts {
+.timeline_head{
       position: fixed;
       margin: 0;
       padding: 0;
@@ -18,10 +18,41 @@
       right: 0;
       left: 0;
       bottom: 50px;
+  
 
       border: 1px solid lightgray;
       background-color: rgb(231, 220, 220);
 }
+
+.timeline_head #timeline_info {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      right: 250px;
+      left: 0;
+      bottom: 50px;
+      font-size: 30px;
+
+      border: 1px solid lightgray;
+      background-color: rgb(231, 220, 220);
+}
+
+.timeline_head #timeline_opts {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      right: 0;
+      left: 250px;
+      bottom: 50px;
+
+      border: 1px solid lightgray;
+      background-color: rgb(231, 220, 220);
+}
+
+
+
 
 #timeline_viz {
       position: fixed;

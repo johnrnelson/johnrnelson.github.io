@@ -41,11 +41,11 @@
                   "title": "Windows 3.11",
                   "date": {
                         "YearStart": 1992,
-                        "YearEnd": 0,
+                        "YearEnd": 2001,
                         "MonthStart": 8,
-                        "MonthEnd": 0,
+                        "MonthEnd": 12,
                         "DayStart": 6,
-                        "DayEnd": 0
+                        "DayEnd": 31
                   }
             }
       ]
