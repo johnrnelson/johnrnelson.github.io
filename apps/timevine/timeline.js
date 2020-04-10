@@ -144,7 +144,7 @@ window.WebTimeLine = {
                         {
                               id: 4404,
                               content: "OpenSource",
-                              showNested: true
+                              // showNested: true
                         },
 
                   ]);
@@ -160,12 +160,12 @@ window.WebTimeLine = {
                               id: 72,
                               content: ".Net",
                               // nestedGroups: [55],
-                              showNested: true
+                              // showNested: true
                         },
                         {
                               id: 73,
                               content: "Office",
-                              showNested: true
+                              // showNested: true
                         },
 
                   ]);
@@ -271,6 +271,11 @@ window.onload = function () {
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
             url: '/data/timeline/microsoft-windows.json'
+      });
+
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 72,
+            url: '/data/timeline/microsoft-net.json'
       });
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
