@@ -49,7 +49,7 @@ window.WebTimeLine = {
                   return CastRecord
             }
       },
-      GetData(GroupID, DataURL, OnData) {
+      GetData(dates_list, GroupID, DataURL, OnData) {
 
 
             WebApp.xhr("GET", DataURL, "", function (error, data) {
@@ -57,13 +57,12 @@ window.WebTimeLine = {
                         console.warn(error);
                   } else {
 
-
                         try {
                               const xhrDATA = JSON.parse(data);
-                              const dates_list = [];
+                              // const dates_list = [];
 
-                              for (let index = 0; index < xhrDATA.dates.length; index++) {
-                                    const dateRecord = xhrDATA.dates[index];
+                              for (let index = 0; index < xhrDATA.length; index++) {
+                                    const dateRecord = xhrDATA[index];
 
                                     dates_list.push(WebTimeLine.Convert.DateCast(GroupID, dateRecord));
                               }
@@ -84,8 +83,6 @@ window.WebTimeLine = {
       */
       BuildTimelineHTML(TimelineItems) {
 
-
-
             //Remove loading...
             // WebTimeLine.HTMLParent.Control.innerHTML = "";
             WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
@@ -99,7 +96,7 @@ window.WebTimeLine = {
                   // zoomMax:50000,
                   // zoomMin:10000,
                   // zoomFriction:500,
-                  // zoomable:false,
+
 
                   // always snap to full hours, independent of the scale
                   // snap: function (date, scale, step) {
@@ -175,7 +172,67 @@ window.WebTimeLine = {
 
                   return groups;
             },
-            AddTimeByGroup(GroupDataURL) {
+
+
+
+
+
+
+
+            AddTimeByGroup(OnData) {
+
+
+                  function AddExamples(TimelineItems) {
+                        /*
+                                   Examples...
+                             */
+                        TimelineItems.push({
+                              id: WebApp.NewID(''),
+                              group: 4404,
+                              content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
+                        });
+                        TimelineItems.push({
+                              id: WebApp.NewID(''),
+                              group: 411,
+                              content: 'TimeVine Proof', start: '2020-04-1', type: 'point'
+                        });
+
+
+                  }
+
+                  function GetGroup() {
+
+                  }
+
+                  var completed_group_total = 0;
+                  const total_group_total = WebTimeLine.Groups.ListURLS.length;
+
+
+                  var time_data = [];
+
+                  for (let index = 0; index < WebTimeLine.Groups.ListURLS.length; index++) {
+                        const URLData = WebTimeLine.Groups.ListURLS[index];
+
+                        //Load up my timeline..
+                        window.WebTimeLine.GetData(time_data, URLData.group_id, URLData.url, function (err) {
+                              if (err) {
+                                    console.warn("\r\nTimeline Data Error", err);
+                              } else {
+                                    completed_group_total++;
+                                    if (completed_group_total == 1) {
+
+                                          AddExamples(time_data);
+                                    }
+
+                                    if (completed_group_total == total_group_total) {
+                                          // debugger;
+
+                                          OnData(time_data);
+                                    }
+
+                              }
+                        });
+                  }
 
             },
       },
@@ -194,63 +251,30 @@ window.onload = function () {
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
 
 
-      
+
+      console.info('Push all the URLS you need for the default time line...', WebTimeLine.Groups.ListURLS);
 
       //Add all the groups URLS you need to fill the time line...
-      WebTimeLine.Groups.ListURLS.push('/data/timeline/jrn.json');
-
-      // WebTimeLine.AddTimeByGroup(time_data, 71, '/data/timeline/microsoft.json', function (err) {
-
-      // });
-
-
-      console.info('Push all the URLS you need for the default time line...',WebTimeLine.Groups.ListURLS);
-
- 
-      //Load up my timeline..
-      window.WebTimeLine.GetData(411, '/data/timeline/jrn.json', function (err, time_data) {
-            if (err) {
-                  console.warn("\r\nTimeline Data Error", err);
-            } else {
-                  console.log("All JRN Data -->", time_data);
- 
-                  console.info("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
-                  console.log("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
-                  console.info("Focus on this  -->", 'https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html');
-                                                      
-
-
-                  /*
-                        Examples...
-                  */
-                  time_data.push({
-                        id: WebApp.NewID(''),
-                        group: 4404,
-                        content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
-                  });
-                  time_data.push({
-                        id: WebApp.NewID(''),
-                        group: 411,
-                        content: 'TimeVine Proof', start: '2020-04-1', type: 'point'
-                  });
-
-
-
-
-
-                  var items = new vis.DataSet(time_data);
-
-
-                  /*
-
-
-                        Need Groups!!!!
-                        view-source:https://visjs.github.io/vis-timeline/examples/timeline/groups/nestedGroups.html
-                  */
-                  console.warn('\r\n\r\nPut this in man! :-)\r\n\r\n');
-
-                  WebTimeLine.BuildTimelineHTML(items);
-            }
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 411,
+            url: '/data/timeline/jrn.json'
       });
+
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 71,
+            url: '/data/timeline/microsoft-windows.json'
+      });
+
+      WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
+            //
+
+
+            var items = new vis.DataSet(time_data);
+
+            WebTimeLine.BuildTimelineHTML(items);
+      });
+
+
+
 
 }
