@@ -1,5 +1,5 @@
 .body {
-      overflow: auto;
+      /* overflow: auto; */
       /* fixes scrollbars */
       margin: 0;
       padding: 0;
@@ -33,32 +33,18 @@
       margin: 0;
       padding: 0;
       top: 0;
-      right: 250px;
+      right: 0;
       left: 0;
-      bottom: 50px;
+      bottom: 30px;
       font-family: 'Abel', sans-serif;
 
-      font-size: 30px;
+      font-size: 20px;
 
       border: 1px solid lightgray;
       background-color: rgb(231, 220, 220);
 }
 
-.timeline_head #timeline_opts {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      right: 0;
-      left: 250px;
-      bottom: 50px;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 35px;
-
-      border: 1px solid lightgray;
-      background-color: rgb(231, 220, 220);
-}
-
+ 
 
 
 
@@ -66,7 +52,7 @@
       position: fixed;
       margin: 0;
       padding: 0;
-      top: 50px;
+      top: 30px;
       right: 0;
       left: 0;
       bottom: 0;

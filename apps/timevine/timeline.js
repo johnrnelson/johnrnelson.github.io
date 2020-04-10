@@ -132,7 +132,7 @@ window.WebTimeLine = {
                   groups.add([
                         {
                               id: 411,
-                              content: "Me",
+                              content: "John Nelson",
                               // nestedGroups: [1]
                         },
                         {
@@ -181,6 +181,7 @@ window.WebTimeLine = {
 
             AddTimeByGroup(OnData) {
 
+                  var time_data = [];
 
                   function AddExamples(TimelineItems) {
                         /*
@@ -204,11 +205,18 @@ window.WebTimeLine = {
 
                   }
 
+                  // console.warn('NOT loading data to test styles...');
+                  // console.warn('NOT loading data to test styles...');
+                  // AddExamples(time_data);
+                  // OnData(time_data);
+                  // return;
+
+
+
                   var completed_group_total = 0;
                   const total_group_total = WebTimeLine.Groups.ListURLS.length;
 
 
-                  var time_data = [];
 
                   for (let index = 0; index < WebTimeLine.Groups.ListURLS.length; index++) {
                         const URLData = WebTimeLine.Groups.ListURLS[index];
@@ -226,7 +234,7 @@ window.WebTimeLine = {
 
                                     if (completed_group_total == total_group_total) {
                                           // debugger;
-
+                                     
                                           OnData(time_data);
                                     }
 
