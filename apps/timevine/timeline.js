@@ -234,7 +234,7 @@ window.WebTimeLine = {
 
                                     if (completed_group_total == total_group_total) {
                                           // debugger;
-                                     
+
                                           OnData(time_data);
                                     }
 
@@ -257,25 +257,25 @@ window.onload = function () {
 
       //Hook our control so we can deal with it later...
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
+ 
 
-
-
+ 
       console.info('Push all the URLS you need for the default time line...', WebTimeLine.Groups.ListURLS);
 
       //Add all the groups URLS you need to fill the time line...
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
-            url: '/data/timeline/jrn.json'
+            url: '//data/timeline/jrn.json'
       });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
-            url: '/data/timeline/microsoft-windows.json'
+            url: '//data/timeline/microsoft-windows.json'
       });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 72,
-            url: '/data/timeline/microsoft-net.json'
+            url: '//data/timeline/microsoft-net.json'
       });
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
