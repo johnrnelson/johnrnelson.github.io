@@ -142,12 +142,24 @@ window.WebTimeLine = {
             // WebTimeLine.VisTimeline.on('rangechange', function (start,end) {
             //       console.info('rangechange  --> ' , start,end);
             // });            
-            WebTimeLine.VisTimeline.on('rangechanged', function (start, end) {
-                  console.info('rangechanged - RESIZE WINDOW  --> ', start, end);
+            WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {
+                  WebTimeLine.TimeDisplayStart.innerHTML = "fff";
+                  WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
+                  WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
+
             });
 
 
       },
+
+
+
+
+
+
+
+
+
       /*
       Load multiple data sources for the groups...
       */
@@ -205,52 +217,28 @@ window.WebTimeLine = {
                   return groups;
             },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            /*
+                  Load our timeline data via the URLS...
+            */
             AddTimeByGroup(OnData) {
 
                   var time_data = [];
 
+                  /*
+                             Examples to use for timeline items....
+                  */
                   function AddExamples(TimelineItems) {
-                        /*
-                                   Examples...
-                             */
                         TimelineItems.push({
                               id: WebApp.NewID(''),
                               group: 4404,
-                              className: "greenx",
+                              className: "basic",
                               content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
                         });
 
                         TimelineItems.push({
                               id: WebApp.NewID(''),
                               group: 411,
-                              className: "greenx",
+                              className: "basic",
                               content: 'TimeVine Proof', start: new Date('2020-04-01'), type: 'point'
                         });
 
@@ -282,21 +270,17 @@ window.WebTimeLine = {
                               if (err) {
                                     console.warn("\r\nTimeline Data Error", err);
                               } else {
-                                    completed_group_total++;
-                                    if (completed_group_total == 1) {
+                                    //We have loaded a remote data source...
+                                    completed_group_total++;                               
 
-                                          // AddExamples(time_data);
-                                    }
-
+                                    //Check to see if we have loaded all that we needed to...
                                     if (completed_group_total == total_group_total) {
                                           // debugger;
-
                                           OnData(time_data);
                                     }
-
                               }
                         });
-                  }
+                  }//End running through our lists...
 
             },
       },
@@ -314,6 +298,8 @@ window.onload = function () {
       //Hook our control so we can deal with it later...
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
 
+      WebTimeLine.TimeDisplayStart = document.querySelector("#DateWindowStart")
+      WebTimeLine.TimeDisplayEnd = document.querySelector("#DateWindowEnd")
 
 
       //Add all the groups URLS you need to fill the time line...
