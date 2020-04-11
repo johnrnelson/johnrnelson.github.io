@@ -8,45 +8,60 @@ window.WebTimeLine = {
             id: "timeline_viz"
       },
       Convert: {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             /*
                   Convert our JSON record into something our
                   HTML control can use....
             */
             DateCast(GroupID, DateRecord) {
 
-                  const dateStart = DateRecord.date.YearEnd;
-
-                  /*
-                        Give our record a unique ID if there is 
-                        not one already supplied...
-                  */
-                  if (!DateRecord.id) {
-                        DateRecord.id = WebApp.NewID('');
-                  }
-
-
-
-                  const CastRecord = {
-                        id: DateRecord.id,
-                        group: GroupID,
-                        content: DateRecord.title,
-                        start: DateRecord.date.YearStart + '-' +
-                              DateRecord.date.MonthStart + '-' +
-                              DateRecord.date.DayStart + ''
-                  }
-                  if (DateRecord.date.YearEnd == 0) {
-                        //it's a point
-                        CastRecord.type = 'point';
-                  } else {
-
-                  }
                   try {
-                        // { id: 11, content: 'item 1', start: '2010-04-20' }
+
+                        /*
+                              Give our record a unique ID if there is 
+                              not one already supplied...
+                        */
+                        if (!DateRecord.id) {
+                              DateRecord.id = WebApp.NewID('');
+                        }
+
+                        const CastRecord = {
+                              id: DateRecord.id,
+                              group: GroupID,
+                              content: DateRecord.title
+                        }
+
+
+                        CastRecord.start = moment(new Date(DateRecord.date.start));
+
+                        if (!DateRecord.date.end) {
+                              //it's a point
+                              CastRecord.type = 'point';
+                        } else {
+                              CastRecord.end = moment(new Date(DateRecord.date.end));
+                        }
+                        return CastRecord
+
                   } catch (errDateConvert) {
                         debugger;
+                        alert('Error in timevine data');
+                        return false;
 
                   }
-                  return CastRecord
+
             }
       },
       GetData(dates_list, GroupID, DataURL, OnData) {
@@ -179,6 +194,27 @@ window.WebTimeLine = {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             AddTimeByGroup(OnData) {
 
                   var time_data = [];
@@ -187,15 +223,16 @@ window.WebTimeLine = {
                         /*
                                    Examples...
                              */
-                        TimelineItems.push({
-                              id: WebApp.NewID(''),
-                              group: 4404,
-                              content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
-                        });
+                        // TimelineItems.push({
+                        //       id: WebApp.NewID(''),
+                        //       group: 4404,
+                        //       content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
+                        // });
+
                         TimelineItems.push({
                               id: WebApp.NewID(''),
                               group: 411,
-                              content: 'TimeVine Proof', start: '2020-04-1', type: 'point'
+                              content: 'TimeVine Proof', start: new Date('2020-04-01'), type: 'point'
                         });
 
 
@@ -229,7 +266,7 @@ window.WebTimeLine = {
                                     completed_group_total++;
                                     if (completed_group_total == 1) {
 
-                                          AddExamples(time_data);
+                                          // AddExamples(time_data);
                                     }
 
                                     if (completed_group_total == total_group_total) {
@@ -257,9 +294,9 @@ window.onload = function () {
 
       //Hook our control so we can deal with it later...
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
- 
 
- 
+
+
       console.info('Push all the URLS you need for the default time line...', WebTimeLine.Groups.ListURLS);
 
       //Add all the groups URLS you need to fill the time line...

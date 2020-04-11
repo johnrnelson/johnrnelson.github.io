@@ -3,60 +3,40 @@
             "id": "1a2b1a5",
             "title": "TEKTOLOGY LLC",
             "date": {
-                  "YearStart": 2014,
-                  "YearEnd": 0,
-                  "MonthStart": 1,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2014-01-01",
+                  "end": false
             }
       },
       {
             "id": "lp45",
             "title": "LifePoint Hospitals",
             "date": {
-                  "YearStart": 2006,
-                  "YearEnd": 2013,
-                  "MonthStart": 1,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2016-01-01",
+                  "end": "2013-01-01"
             }
       },
       {
             "id": "jak56",
             "title": "Jackson Automotive Group",
             "date": {
-                  "YearStart": 2006,
-                  "YearEnd": 2006,
-                  "MonthStart": 1,
-                  "MonthEnd": 6,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2006-01-01",
+                  "end": "2006-06-01"
             }
       },
       {
             "id": "hca92",
             "title": "HCA/CPI",
             "date": {
-                  "YearStart": 2005,
-                  "YearEnd": 2006,
-                  "MonthStart": 1,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2005-01-01",
+                  "end": "2006-01-01"
             }
       },
       {
             "id": "bos44",
             "title": "Boswell Consulting",
             "date": {
-                  "YearStart": 2005,
-                  "YearEnd": 2005,
-                  "MonthStart": 1,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2005-01-01",
+                  "end": "2005-07-01"
             }
       }
 ]

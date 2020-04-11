@@ -3,48 +3,33 @@
             "id": "winOS1",
             "title": "Windows 1.0",
             "date": {
-                  "YearStart": 1985,
-                  "YearEnd": 2001,
-                  "MonthStart": 2,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "1985-02-01",
+                  "end": "2001-02-01"
             }
       },
       {
             "id": "winOS2",
             "title": "Windows 2.0",
             "date": {
-                  "YearStart": 1987,
-                  "YearEnd": 0,
-                  "MonthStart": 12,
-                  "MonthEnd": 0,
-                  "DayStart": 9,
-                  "DayEnd": 0
+                  "start": "1987-12-09",
+                  "end": false
             }
       },
       {
             "id": "winOS3",
             "title": "Windows 3.0",
             "date": {
-                  "YearStart": 1990,
-                  "YearEnd": 0,
-                  "MonthStart": 5,
-                  "MonthEnd": 0,
-                  "DayStart": 22,
-                  "DayEnd": 0
+                  "start": "1990-05-22",
+                  "end": false
             }
       },
       {
             "id": "winOS31",
             "title": "Windows 3.11",
             "date": {
-                  "YearStart": 1992,
-                  "YearEnd": 2001,
-                  "MonthStart": 8,
-                  "MonthEnd": 12,
-                  "DayStart": 6,
-                  "DayEnd": 31
+                  "start": "1992-08-06",
+                  "end": "2001-12-31"
+
             }
       }
 ]

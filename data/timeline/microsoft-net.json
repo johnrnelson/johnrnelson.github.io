@@ -3,60 +3,40 @@
             "id": "win.net-1",
             "title": ".Net 1.0",
             "date": {
-                  "YearStart": 2000,
-                  "YearEnd": 0,
-                  "MonthStart": 8,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2000-08-01",
+                  "end": false
             }
       },
       {
             "id": "win.net-1.1",
             "title": ".Net 1.1",
             "date": {
-                  "YearStart": 2003,
-                  "YearEnd": 0,
-                  "MonthStart": 4,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2003-04-01",
+                  "end": false
             }
       },
       {
             "id": "win.net-2.0",
             "title": ".Net 2.0",
             "date": {
-                  "YearStart": 2006,
-                  "YearEnd": 0,
-                  "MonthStart": 1,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2006-01-01",
+                  "end": false
             }
       },
       {
             "id": "win.net-3.0",
             "title": ".Net 3.0",
             "date": {
-                  "YearStart": 2006,
-                  "YearEnd": 0,
-                  "MonthStart": 11,
-                  "MonthEnd": 1,
-                  "DayStart": 21,
-                  "DayEnd": 1
+                  "start": "2006-11-21",
+                  "end": false
             }
       },
       {
             "id": "win.net-4.0",
             "title": ".Net 4.0",
             "date": {
-                  "YearStart": 2010,
-                  "YearEnd": 0,
-                  "MonthStart": 4,
-                  "MonthEnd": 1,
-                  "DayStart": 1,
-                  "DayEnd": 1
+                  "start": "2010-04-01",
+                  "end": false 
             }
       }
 ]
