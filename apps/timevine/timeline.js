@@ -41,11 +41,21 @@ window.WebTimeLine = {
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title
+                              content: DateRecord.title,
+
                         }
 
 
                         CastRecord.start = moment(new Date(DateRecord.date.start));
+
+                        if (!DateRecord.className) {
+                              console.info('default basic');
+                              DateRecord.className = "basic";
+                        } else {
+                              console.info('set ', DateRecord.className);
+
+                        }
+                        CastRecord.className = DateRecord.className;
 
                         if (!DateRecord.date.end) {
                               //it's a point
@@ -120,7 +130,18 @@ window.WebTimeLine = {
                   // }, 
 
                   //No need to order, we do that in the code....
-                  groupOrder: 'none'
+                  groupOrder: 'none',
+
+                  //Handle the scroll issues...
+                  verticalScroll: true,
+                  // horizontalScroll: true,
+                  zoomKey: 'ctrlKey',
+                  // maxHeight: 400,                
+                  height: window.innerHeight - 20,
+                  // height: 200,
+                  // height:WebTimeLine.HTMLParent.Control.scrollHeight,
+                  // height: '95%',
+
             };
 
             // Create a Timeline..
@@ -129,6 +150,10 @@ window.WebTimeLine = {
                   TimelineItems,
                   WebTimeLine.Groups.BuildGroups(),
                   options);
+
+            WebTimeLine.VisTimeline.on('select', function (properties) {
+                  console.info('selected items: ' + properties.nodes);
+            });
 
       },
       /*
@@ -223,15 +248,17 @@ window.WebTimeLine = {
                         /*
                                    Examples...
                              */
-                        // TimelineItems.push({
-                        //       id: WebApp.NewID(''),
-                        //       group: 4404,
-                        //       content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
-                        // });
+                        TimelineItems.push({
+                              id: WebApp.NewID(''),
+                              group: 4404,
+                              className: "greenx",
+                              content: 'Open Source Test', start: '2012-01-1', end: '2017-04-19'
+                        });
 
                         TimelineItems.push({
                               id: WebApp.NewID(''),
                               group: 411,
+                              className: "greenx",
                               content: 'TimeVine Proof', start: new Date('2020-04-01'), type: 'point'
                         });
 
@@ -297,13 +324,15 @@ window.onload = function () {
 
 
 
-      console.info('Push all the URLS you need for the default time line...', WebTimeLine.Groups.ListURLS);
-
       //Add all the groups URLS you need to fill the time line...
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
             url: '//data/timeline/jrn.json'
       });
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 411,
+            url: '//data/timeline/jrn.json'
+      });      
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
@@ -316,8 +345,6 @@ window.onload = function () {
       });
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
-            //
-
 
             var items = new vis.DataSet(time_data);
 

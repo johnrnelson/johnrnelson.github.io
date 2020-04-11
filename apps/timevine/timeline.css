@@ -1,5 +1,10 @@
 .body {
-      /* overflow: auto; */
+
+      /* Hide vertical scrollbar */
+      overflow-y: hidden;
+
+      /* Hide horizontal scrollbar */
+      overflow-x: hidden;
       /* fixes scrollbars */
       margin: 0;
       padding: 0;
@@ -44,9 +49,6 @@
       background-color: rgb(231, 220, 220);
 }
 
- 
-
-
 
 #timeline_viz {
       position: fixed;
@@ -61,6 +63,24 @@
       background-color: rgb(231, 220, 220);
 }
 
+
+
+#timeline_viz_rel {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      top: 30px;
+      width: 100%;
+      height: 100%;
+
+      border: 1px solid lightgray;
+      background-color: rgb(231, 220, 220);
+}
+
+
+/*
+Loading element..
+*/
 #timeline_viz #timeline_loading {
       color: blue;
       font-size: 25px;
@@ -74,7 +94,7 @@
 }
 
 .vis-item {
-      border-color: #F991A3;
+      border-color: rgb(143, 143, 143);
       background-color: red;
       font-size: 15pt;
       color: purple;
@@ -83,21 +103,52 @@
       /* cursor: default !important;  */
       cursor: help !important;
 
+      border-radius: 10px !important;
+      ;
+
 }
- 
+
+
+/* 
+Custom time line items... 
+*/
+.vis-item.basic {
+      background-color: greenyellow;
+      border-color: blue;
+      /* border-width: 1px;  */
+      font-family: 'Abel', sans-serif;
+}
+
+.vis-item.microsoft {
+      /* background-color: rgb(225, 243, 203); */
+      border-color: rgb(114, 47, 221);
+      color: rgb(34, 4, 4);
+      /* font-family: 'PT Sans', sans-serif; */
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 0 10px gray;
+      /* border-width: 1px;  */
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
+
+}
+
+
+
+/*
+generic styles...
+*/
 .vis-item.vis-line {
       border-width: 3px;
 }
 
 .vis-item.vis-dot {
       border-width: 10px;
-      border-radius: 10px;
+      border-radius: 20px;
 }
 
 .vis-item.vis-selected {
 
       border-color: rgb(52, 24, 117);
- 
+
       background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
       /* background: -webkit-radial-gradient(center, ellipse cover, rgb(148, 35, 35) 0%, rgb(150, 25, 199) 100%); */
 
@@ -112,15 +163,14 @@
 
 .vis-time-axis .vis-text.vis-major {
       font-weight: bold;
-
 }
 
 .vis-time-axis .vis-grid.vis-minor {
-      border-width: 2px;
+      border-radius: 20px;
       border-color: pink;
 }
 
 .vis-time-axis .vis-grid.vis-major {
-      border-width: 2px;
+      border-radius: 20px;
       border-color: #F991A3;
 }

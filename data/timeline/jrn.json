@@ -1,30 +1,29 @@
 [
       {
-            "id": "1a2b1a5",
             "title": "TEKTOLOGY LLC",
+            "className": "green",
             "date": {
                   "start": "2014-01-01",
                   "end": false
             }
       },
       {
-            "id": "lp45",
             "title": "LifePoint Hospitals",
+            "className": "green",
             "date": {
                   "start": "2016-01-01",
                   "end": "2013-01-01"
             }
       },
       {
-            "id": "jak56",
             "title": "Jackson Automotive Group",
+            "className": "green",
             "date": {
                   "start": "2006-01-01",
                   "end": "2006-06-01"
             }
       },
       {
-            "id": "hca92",
             "title": "HCA/CPI",
             "date": {
                   "start": "2005-01-01",
@@ -32,7 +31,6 @@
             }
       },
       {
-            "id": "bos44",
             "title": "Boswell Consulting",
             "date": {
                   "start": "2005-01-01",

@@ -2,6 +2,7 @@
       {
             "id": "winOS1",
             "title": "Windows 1.0",
+            "className": "microsoft",
             "date": {
                   "start": "1985-02-01",
                   "end": "2001-02-01"
@@ -10,6 +11,7 @@
       {
             "id": "winOS2",
             "title": "Windows 2.0",
+            "className": "microsoft",
             "date": {
                   "start": "1987-12-09",
                   "end": false
@@ -18,6 +20,7 @@
       {
             "id": "winOS3",
             "title": "Windows 3.0",
+            "className": "microsoft",
             "date": {
                   "start": "1990-05-22",
                   "end": false
@@ -26,6 +29,7 @@
       {
             "id": "winOS31",
             "title": "Windows 3.11",
+            "className": "microsoft",
             "date": {
                   "start": "1992-08-06",
                   "end": "2001-12-31"
