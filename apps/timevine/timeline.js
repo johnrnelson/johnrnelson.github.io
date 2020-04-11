@@ -8,20 +8,6 @@ window.WebTimeLine = {
             id: "timeline_viz"
       },
       Convert: {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             /*
                   Convert our JSON record into something our
                   HTML control can use....
@@ -48,13 +34,11 @@ window.WebTimeLine = {
 
                         CastRecord.start = moment(new Date(DateRecord.date.start));
 
+                        //Set a default class incase the data in not so complete..
                         if (!DateRecord.className) {
-                              console.info('default basic');
                               DateRecord.className = "basic";
-                        } else {
-                              console.info('set ', DateRecord.className);
-
                         }
+
                         CastRecord.className = DateRecord.className;
 
                         if (!DateRecord.date.end) {
@@ -152,8 +136,16 @@ window.WebTimeLine = {
                   options);
 
             WebTimeLine.VisTimeline.on('select', function (properties) {
-                  console.info('selected items: ' + properties.nodes);
+                  console.info('selected items --> ', properties.items);
+                  console.info('selected events --> ', properties);
             });
+            // WebTimeLine.VisTimeline.on('rangechange', function (start,end) {
+            //       console.info('rangechange  --> ' , start,end);
+            // });            
+            WebTimeLine.VisTimeline.on('rangechanged', function (start, end) {
+                  console.info('rangechanged - RESIZE WINDOW  --> ', start, end);
+            });
+
 
       },
       /*
@@ -332,7 +324,7 @@ window.onload = function () {
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
             url: '//data/timeline/jrn.json'
-      });      
+      });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
@@ -348,10 +340,27 @@ window.onload = function () {
 
             var items = new vis.DataSet(time_data);
 
+
+            window.onresize();
+
+            window.AppMenu.Hook();
+
             WebTimeLine.BuildTimelineHTML(items);
       });
 
 
 
+}
 
+/*
+      Resize and/or redraw whatever is needed for the timeline to 
+      respect the new size of the window...
+*/
+window.onresize = function () {
+      //Redraw our timeline to respect the window size...
+      if (WebTimeLine.VisTimeline) {
+            WebTimeLine.VisTimeline.setOptions({
+                  height: window.innerHeight - 20
+            });
+      }
 }
