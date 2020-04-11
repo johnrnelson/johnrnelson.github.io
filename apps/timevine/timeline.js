@@ -306,11 +306,7 @@ window.onload = function () {
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
             url: '//data/timeline/jrn.json'
-      });
-      WebTimeLine.Groups.ListURLS.push({
-            group_id: 411,
-            url: '//data/timeline/jrn.json'
-      });
+      }); 
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
