@@ -23,12 +23,13 @@ window.WebTimeLine = {
                         if (!DateRecord.id) {
                               DateRecord.id = WebApp.NewID('');
                         }
+                        // const aniWrapper = `<span class="animated bounce">xxx${DateRecord.title}</span>`
+
 
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title,
-
+                              content: DateRecord.title
                         }
 
 
@@ -95,7 +96,10 @@ window.WebTimeLine = {
             //Remove loading...
             // WebTimeLine.HTMLParent.Control.innerHTML = "";
             WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
+            WebTimeLine.HTMLParent.TimeSpanDisplay = document.getElementById("timeline_info");
             WebTimeLine.HTMLParent.Loading.style.display = "none";
+            
+            
 
             // Configuration for the Timeline
             var options = {
@@ -119,13 +123,9 @@ window.WebTimeLine = {
                   //Handle the scroll issues...
                   verticalScroll: true,
                   // horizontalScroll: true,
-                  zoomKey: 'ctrlKey',
-                  // maxHeight: 400,                
+                  zoomKey: 'shiftKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
                   height: window.innerHeight - 20,
                   // height: 200,
-                  // height:WebTimeLine.HTMLParent.Control.scrollHeight,
-                  // height: '95%',
-
             };
 
             // Create a Timeline..
@@ -139,15 +139,19 @@ window.WebTimeLine = {
                   console.info('selected items --> ', properties.items);
                   console.info('selected events --> ', properties);
             });
-            // WebTimeLine.VisTimeline.on('rangechange', function (start,end) {
-            //       console.info('rangechange  --> ' , start,end);
-            // });            
+
+            // This event fires during change...
+            // WebTimeLine.VisTimeline.on('rangechange', function (start, end) { });
+
+            //This event fires after the change...
             WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {
-                  WebTimeLine.TimeDisplayStart.innerHTML = "fff";
                   WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
                   WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
-
             });
+
+            WebTimeLine.HTMLParent.TimeSpanDisplay.style.display = "block";
+            WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
+            WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
 
 
       },
@@ -271,7 +275,7 @@ window.WebTimeLine = {
                                     console.warn("\r\nTimeline Data Error", err);
                               } else {
                                     //We have loaded a remote data source...
-                                    completed_group_total++;                               
+                                    completed_group_total++;
 
                                     //Check to see if we have loaded all that we needed to...
                                     if (completed_group_total == total_group_total) {
@@ -306,7 +310,7 @@ window.onload = function () {
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
             url: '//data/timeline/jrn.json'
-      }); 
+      });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,

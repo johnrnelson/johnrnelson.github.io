@@ -81,10 +81,9 @@ linkz {
    display: block;
    position: relative;
    text-align: left;
-   min-height: 80px;
-   
+   min-height: 80px;   
    width: 60%;
-   
+   padding-bottom: 10px;   
 }
 
 linkz icon {

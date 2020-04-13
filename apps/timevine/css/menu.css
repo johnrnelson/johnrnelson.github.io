@@ -1,0 +1,20 @@
+.timeline_head #timeline_menu {
+      position: absolute;
+      margin: 0;
+      padding-left: 5px;
+      top: 0;
+      left: 0;
+      right: 30px;
+      bottom: 30px;    
+
+      font-size: 25px;
+      background-color: rgb(231, 220, 220);  
+      color:blue;
+
+}
+.timeline_head #timeline_menu:hover {
+      color: rgb(6, 6, 77);
+
+      /* border: 1px solid blue;  */
+      /* background-color: rgb(221, 6, 6); */
+}

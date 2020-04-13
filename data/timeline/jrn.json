@@ -36,5 +36,103 @@
                   "start": "2005-01-01",
                   "end": "2005-07-01"
             }
+      },
+      {
+            "title": "HCA/Shawn Lee LLC",
+            "date": {
+                  "start": "2002-01-01",
+                  "end": "2004-06-01"
+            }
+      },
+      {
+            "title": "Kroger/TEKsystems",
+            "date": {
+                  "start": "2001-01-01",
+                  "end": "2002-06-01"
+            }
+      },
+      {
+            "title": "SurfMonkey / Scapeware",
+            "date": {
+                  "start": "1999-01-01",
+                  "end": "2001-06-01"
+            }
+      },
+      {
+            "title": "Fleamarket.com / Scapeware",
+            "date": {
+                  "start": "1998-01-01",
+                  "end": "1999-01-01"
+            }
+      },
+      {
+            "title": "Cognitive / Scapeware",
+            "date": {
+                  "start": "1998-06-01",
+                  "end": "1997-01-01"
+            }
+      },
+      {
+            "title": "Eckerd Corporation",
+            "date": {
+                  "start": "1998-01-01",
+                  "end": "1998-03-01"
+            }
+      },
+      {
+            "title": "Intermedia / DMR",
+            "date": {
+                  "start": "1998-01-01",
+                  "end": "1999-06-01"
+            }
+      },
+      {
+            "title": "Ryder Trucking Company / Metro",
+            "date": {
+                  "start": "1997-01-01",
+                  "end": "1998-00-01"
+            }
+      },
+      {
+            "title": "AllTell / Metro",
+            "date": {
+                  "start": "1997-06-01",
+                  "end": "1998-06-01"
+            }
+      },
+      {
+            "title": "Nori Dren",
+            "date": {
+                  "start": "1996-01-01",
+                  "end": "1998-01-01"
+            }
+      },
+      {
+            "title": "Virginia State / Metro Consulting",
+            "date": {
+                  "start": "1997-01-01",
+                  "end": "1997-03-01"
+            }
+      },
+      {
+            "title": "Massey Coal / Metro Consulting",
+            "date": {
+                  "start": "1996-01-01",
+                  "end": "1997-06-01"
+            }
+      },
+      {
+            "title": "Department of Game & Fish/ Computer Consulting Group",
+            "date": {
+                  "start": "1996-04-01",
+                  "end": "1996-07-01"
+            }
+      },
+      {
+            "title": "Virginia DMV / Computer Consulting Group",
+            "date": {
+                  "start": "1995-01-01",
+                  "end": "1996-07-01"
+            }
       }
 ]

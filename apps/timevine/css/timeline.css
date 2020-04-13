@@ -33,25 +33,6 @@
 
 }
 
-.timeline_head #timeline_menu {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      left: 0;
-      right: 30px;
-      bottom: 30px;    
-
-      font-size: 25px;
-      background-color: rgb(231, 220, 220);  
-
-}
-.timeline_head #timeline_menu:hover {
-      color: rgb(3, 3, 122);
-
-      /* border: 1px solid blue;  */
-      /* background-color: rgb(221, 6, 6); */
-}
 
 
 .timeline_head #timeline_info {
