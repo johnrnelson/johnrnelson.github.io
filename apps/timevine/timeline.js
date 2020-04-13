@@ -93,6 +93,7 @@ window.WebTimeLine = {
       */
       BuildTimelineHTML(TimelineItems) {
 
+            // return;
             //Remove loading...
             // WebTimeLine.HTMLParent.Control.innerHTML = "";
             WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
@@ -123,7 +124,7 @@ window.WebTimeLine = {
                   //Handle the scroll issues...
                   verticalScroll: true,
                   // horizontalScroll: true,
-                  zoomKey: 'shiftKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
+                  zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
                   height: window.innerHeight - 20,
                   // height: 200,
             };
@@ -144,16 +145,11 @@ window.WebTimeLine = {
             // WebTimeLine.VisTimeline.on('rangechange', function (start, end) { });
 
             //This event fires after the change...
-            WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {
+            WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {     
                   WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
                   WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
             });
-
             WebTimeLine.HTMLParent.TimeSpanDisplay.style.display = "block";
-            WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
-            WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
-
-
       },
 
 
@@ -299,11 +295,22 @@ window.WebTimeLine = {
 */
 window.onload = function () {
 
+      //Hook our menu after everything is loaded and good to go...
+      window.AppMenu.Hook();
+
       //Hook our control so we can deal with it later...
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
 
       WebTimeLine.TimeDisplayStart = document.querySelector("#DateWindowStart")
       WebTimeLine.TimeDisplayEnd = document.querySelector("#DateWindowEnd")
+
+
+      //Load the default help first so the user knows what they can do...
+      AppMenu.LoadOverlay("/apps/timevine/help/index.html",function(err){
+            if(err){
+                  console.warn('OverLay---',err);
+            }
+      });
 
 
       //Add all the groups URLS you need to fill the time line...
@@ -329,12 +336,11 @@ window.onload = function () {
 
             window.onresize();
 
-            window.AppMenu.Hook();
-
+            
             WebTimeLine.BuildTimelineHTML(items);
       });
-
-
+      
+ 
 
 }
 

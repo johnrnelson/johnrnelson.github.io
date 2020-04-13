@@ -1,0 +1,20 @@
+#timeline_overlay{
+      /* display:none; */
+      display:block;
+      color:rgb(177, 235, 143);
+      position: absolute;
+      margin: 0;
+      padding: 30px;
+      top: 30px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 500;
+
+      border: 1px solid lightgray;
+      background-color: rgb(61, 1, 1);      
+}
+#timeline_overlay .overlay_title{
+      color:white;
+      font-size: 25px;
+}
