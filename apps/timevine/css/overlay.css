@@ -1,6 +1,6 @@
 #timeline_overlay{
-      /* display:none; */
-      display:block;
+      display:none;
+      /* display:block; */
       color:rgb(177, 235, 143);
       position: absolute;
       margin: 0;
