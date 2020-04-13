@@ -2,9 +2,9 @@
       display:none;
       /* display:block; */
       color:rgb(177, 235, 143);
-      position: absolute;
+      position: fixed;
       margin: 0;
-      padding: 30px;
+      padding: 0;
       top: 30px;
       right: 0;
       left: 0;
@@ -12,9 +12,24 @@
       z-index: 500;
 
       border: 1px solid lightgray;
-      background-color: rgb(61, 1, 1);      
+      background-color: rgb(61, 1, 1);    
+      
+      overflow:auto;
 }
-#timeline_overlay .overlay_title{
-      color:white;
+#timeline_overlay #overlay_title{
+      color:rgb(45, 194, 65);
       font-size: 25px;
+      text-shadow: 1px 1px #ff0000;
+      padding-left: 10px;
+}
+#timeline_overlay #overlay_body{
+      position: relative;
+
+      color:rgb(190, 184, 184);
+      font-size: 15px;
+      font-family: 'Gugi', cursive;
+      padding: 10px;
+
+
+      /* border: 1px solid lightgray; */
 }

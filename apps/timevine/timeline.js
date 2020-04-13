@@ -102,13 +102,17 @@ window.WebTimeLine = {
             
             
 
-            // Configuration for the Timeline
+            /* 
+                  Configuration for the Timeline
+                  Docs at (https://visjs.github.io/vis-timeline/docs/timeline/)
+
+            */
             var options = {
                   // max: new Date() + 360,
                   max: '2025-01-1', //Do I really need to hard code this???
                   min: '1980-01-1',
-                  // zoomMax:50000,
-                  // zoomMin:10000,
+                  zoomMax:315360000000000,
+                  zoomMin:10000000000,
                   // zoomFriction:500,
 
 
@@ -306,7 +310,7 @@ window.onload = function () {
 
 
       //Load the default help first so the user knows what they can do...
-      AppMenu.LoadOverlay("/apps/timevine/help/index.html",function(err){
+      AppMenu.LoadOverlay("Basic Timeline Help","/apps/timevine/help/index.html",function(err){
             if(err){
                   console.warn('OverLay---',err);
             }
