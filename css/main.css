@@ -114,14 +114,14 @@ linkz linkinfo title {
    display: block;
    position: relative;
    font-family: 'Roboto', sans-serif;
-   font-size: 22px;
+   font-size: 20px;
 }
 
 linkz linkinfo desc {
    display: block; 
    position: relative; 
    font-family: 'Abel', sans-serif;
-   font-size: 22px;
+   font-size: 18px;
    color: black;
    padding:0;
 }
