@@ -29,7 +29,7 @@ window.WebTimeLine = {
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title
+                              content: DateRecord.title +" grrrrrr"
                         }
 
 
@@ -113,7 +113,7 @@ window.WebTimeLine = {
                   min: '1980-01-1',
                   zoomMax: 315360000000000,
                   zoomMin: 10000000000,
-                  zoomFriction:5,
+                  
 
                   moveable: true, zoomable: false,
 

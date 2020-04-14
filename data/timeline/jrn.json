@@ -1,7 +1,7 @@
 [
       {
             "title": "TEKTOLOGY LLC",
-            "className": "green",
+            "className": "jrn",
             "date": {
                   "start": "2014-01-01",
                   "end": false
@@ -9,15 +9,15 @@
       },
       {
             "title": "LifePoint Hospitals",
-            "className": "green",
+            "className": "jrn",
             "date": {
-                  "start": "2016-01-01",
-                  "end": "2013-01-01"
+                  "start": "2013-01-01",
+                  "end": "2016-01-01"
             }
       },
       {
             "title": "Jackson Automotive Group",
-            "className": "green",
+            "className": "jrn",
             "date": {
                   "start": "2006-01-01",
                   "end": "2006-06-01"
@@ -25,6 +25,7 @@
       },
       {
             "title": "HCA/CPI",
+            "className": "jrn",
             "date": {
                   "start": "2005-01-01",
                   "end": "2006-01-01"
@@ -32,6 +33,7 @@
       },
       {
             "title": "Boswell Consulting",
+            "className": "jrn",
             "date": {
                   "start": "2005-01-01",
                   "end": "2005-07-01"
@@ -39,6 +41,7 @@
       },
       {
             "title": "HCA/Shawn Lee LLC",
+            "className": "jrn",
             "date": {
                   "start": "2002-01-01",
                   "end": "2004-06-01"
@@ -46,6 +49,7 @@
       },
       {
             "title": "Kroger/TEKsystems",
+            "className": "jrn",
             "date": {
                   "start": "2001-01-01",
                   "end": "2002-06-01"
@@ -53,6 +57,7 @@
       },
       {
             "title": "SurfMonkey / Scapeware",
+            "className": "jrn",
             "date": {
                   "start": "1999-01-01",
                   "end": "2001-06-01"
@@ -60,6 +65,7 @@
       },
       {
             "title": "Fleamarket.com / Scapeware",
+            "className": "jrn",
             "date": {
                   "start": "1998-01-01",
                   "end": "1999-01-01"
@@ -67,6 +73,7 @@
       },
       {
             "title": "Cognitive / Scapeware",
+            "className": "jrn",
             "date": {
                   "start": "1998-06-01",
                   "end": "1997-01-01"
@@ -74,6 +81,7 @@
       },
       {
             "title": "Eckerd Corporation",
+            "className": "jrn",
             "date": {
                   "start": "1998-01-01",
                   "end": "1998-03-01"
@@ -81,6 +89,7 @@
       },
       {
             "title": "Intermedia / DMR",
+            "className": "jrn",
             "date": {
                   "start": "1998-01-01",
                   "end": "1999-06-01"
@@ -88,6 +97,7 @@
       },
       {
             "title": "Ryder Trucking Company / Metro",
+            "className": "jrn",
             "date": {
                   "start": "1997-01-01",
                   "end": "1998-00-01"
@@ -95,6 +105,7 @@
       },
       {
             "title": "AllTell / Metro",
+            "className": "jrn",
             "date": {
                   "start": "1997-06-01",
                   "end": "1998-06-01"
@@ -102,6 +113,7 @@
       },
       {
             "title": "Nori Dren",
+            "className": "jrn",
             "date": {
                   "start": "1996-01-01",
                   "end": "1998-01-01"
@@ -109,6 +121,7 @@
       },
       {
             "title": "Virginia State / Metro Consulting",
+            "className": "jrn",
             "date": {
                   "start": "1997-01-01",
                   "end": "1997-03-01"
@@ -116,6 +129,7 @@
       },
       {
             "title": "Massey Coal / Metro Consulting",
+            "className": "jrn",
             "date": {
                   "start": "1996-01-01",
                   "end": "1997-06-01"
@@ -123,6 +137,7 @@
       },
       {
             "title": "Department of Game & Fish/ Computer Consulting Group",
+            "className": "jrn",
             "date": {
                   "start": "1996-04-01",
                   "end": "1996-07-01"
@@ -130,6 +145,7 @@
       },
       {
             "title": "Virginia DMV / Computer Consulting Group",
+            "className": "jrn",
             "date": {
                   "start": "1995-01-01",
                   "end": "1996-07-01"
