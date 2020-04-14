@@ -1,6 +1,6 @@
 [
       {
-            "title": "Linux First Kernel Release",
+            "title": "<i class='fab fa-linux'></i> Linux First Kernel Release",
             "className": "open-source",
             "date": {
                   "start": "1991-09-17",
@@ -8,7 +8,7 @@
             }
       },
       {
-            "title": "Chrome OS",
+            "title": "<i class='fab fa-chrome'></i> Chrome OS",
             "className": "open-source",
             "date": {
                   "start": "2011-06-15",
@@ -16,7 +16,7 @@
             }
       },
       {
-            "title": "Android OS",
+            "title": "<i class='fab fa-android'></i> Android OS",
             "className": "open-source",
             "date": {
                   "start": "2008-06-23",

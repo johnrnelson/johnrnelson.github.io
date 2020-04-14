@@ -1,7 +1,7 @@
 [
       {
             "id": "winOS1",
-            "title": "<i class='fab fa-microsoft'></i> Windows 1.0",
+            "title": "<i class='fab fa-windows'></i> Windows 1.0",
             "className": "microsoft",
             "date": {
                   "start": "1985-02-01",
@@ -10,7 +10,7 @@
       },
       {
             "id": "winOS2",
-            "title": "<i class='fab fa-microsoft'></i> Windows 2.0",
+            "title": "<i class='fab fa-windows'></i> Windows 2.0",
             "className": "microsoft",
             "date": {
                   "start": "1987-12-09",
@@ -19,7 +19,7 @@
       },
       {
             "id": "winOS3",
-            "title": "<i class='fab fa-microsoft'></i> Windows 3.0",
+            "title": "<i class='fab fa-windows'></i> Windows 3.0",
             "className": "microsoft",
             "date": {
                   "start": "1990-05-22",
@@ -28,7 +28,7 @@
       },
       {
             "id": "winOS31",
-            "title": "<i class='fab fa-microsoft'></i> Windows 3.11",
+            "title": "<i class='fab fa-windows'></i> Windows 3.11",
             "className": "microsoft",
             "date": {
                   "start": "1992-08-06",

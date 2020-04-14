@@ -1,7 +1,7 @@
 [
      
       {
-            "title": "JavaScript Released",
+            "title": "<i class='fab fa-js'></i> JavaScript Released",
             "className": "open-source",
             "date": {
                   "start": "1995-12-04",
@@ -9,7 +9,7 @@
             }
       },
       {
-            "title": "ECMAScript 6",
+            "title": "<i class='fab fa-js'></i> ECMAScript 6",
             "className": "open-source",
             "date": {
                   "start": "2015-01-01",
