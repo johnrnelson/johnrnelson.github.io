@@ -32,6 +32,10 @@
 
       /* border: 1px solid lightgray; */
 
+      -webkit-user-select: none; /* Chrome/Safari */        
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE10+ */
+      
 }
 
 
@@ -109,13 +113,13 @@ Custom time line items...
 
 .vis-item.jrn {
       /* background-color: rgb(225, 243, 203); */
-      /* border-color: rgb(45, 2, 116); */
+      border-color: rgb(45, 2, 116);      
       color: rgb(3, 3, 145);
 
       /* font-family: 'Roboto', sans-serif; */
       font-family: 'PT Sans', sans-serif;
 
-      box-shadow: 0 0 5px rgb(53, 53, 53);
+      /* box-shadow: 0 0 10px rgb(53, 53, 53); */
       /* border-width: 1px;  */
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
 

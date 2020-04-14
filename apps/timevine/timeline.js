@@ -313,12 +313,7 @@ window.onload = function () {
       WebTimeLine.TimeDisplayEnd = document.querySelector("#DateWindowEnd")
 
 
-      //Load the default help first so the user knows what they can do...
-      AppMenu.LoadOverlay("Basic Timeline Help", "/apps/timevine/help/index.html", function (err) {
-            if (err) {
-                  console.warn('OverLay---', err);
-            }
-      });
+
 
 
       //Add all the groups URLS you need to fill the time line...
