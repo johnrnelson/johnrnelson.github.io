@@ -1,0 +1,19 @@
+[
+     
+      {
+            "title": "JavaScript Released",
+            "className": "open-source",
+            "date": {
+                  "start": "1995-12-04",
+                  "end": false
+            }
+      },
+      {
+            "title": "ECMAScript 6",
+            "className": "open-source",
+            "date": {
+                  "start": "2015-01-01",
+                  "end": false
+            }
+      }      
+]

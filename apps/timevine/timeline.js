@@ -132,8 +132,8 @@ window.WebTimeLine = {
                   options);
 
             WebTimeLine.VisTimeline.on('select', function (properties) {
-                  console.info('selected items --> ', properties.items);
-                  console.info('selected events --> ', properties);
+                  // console.info('selected items --> ', properties.items);
+                  // console.info('selected events --> ', properties);
                   WebTimeLine.VisTimeline.focus(properties.items[0]);
             });
 
@@ -217,7 +217,7 @@ window.WebTimeLine = {
                   groups.add([
                         {
                               id: 81,
-                              content: "Linux",
+                              content: "OS",
                               // nestedGroups: [1]
                         },
                         {
@@ -337,10 +337,24 @@ window.onload = function () {
             group_id: 71,
             url: '//data/timeline/microsoft-windows.json'
       });
-
       WebTimeLine.Groups.ListURLS.push({
             group_id: 72,
             url: '//data/timeline/microsoft-net.json'
+      });
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 73,
+            url: '//data/timeline/microsoft-office.json'
+      });
+
+
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 81,
+            url: '//data/timeline/open-source-OS.json'
+      });
+
+      WebTimeLine.Groups.ListURLS.push({
+            group_id: 82,
+            url: '//data/timeline/open-source-JS.json'
       });
 
 

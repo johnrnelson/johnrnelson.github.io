@@ -1,0 +1,26 @@
+[
+      {
+            "title": "Linux First Kernel Release",
+            "className": "open-source",
+            "date": {
+                  "start": "1991-09-17",
+                  "end": false
+            }
+      },
+      {
+            "title": "Chrome OS",
+            "className": "open-source",
+            "date": {
+                  "start": "2011-06-15",
+                  "end": false
+            }
+      },
+      {
+            "title": "Android OS",
+            "className": "open-source",
+            "date": {
+                  "start": "2008-06-23",
+                  "end": false
+            }
+      } 
+]

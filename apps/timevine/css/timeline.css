@@ -114,17 +114,10 @@ Custom time line items...
 .vis-item.jrn {
       /* background-color: rgb(225, 243, 203); */
       border-color: rgb(45, 2, 116);      
-      color: rgb(3, 3, 145);
-
-      /* font-family: 'Roboto', sans-serif; */
-      font-family: 'PT Sans', sans-serif;
-
-      /* box-shadow: 0 0 10px rgb(53, 53, 53); */
-      /* border-width: 1px;  */
+      color: rgb(3, 3, 145); 
+      font-family: 'PT Sans', sans-serif; 
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
-
 }
-
 
 .vis-item.microsoft {
       /* background-color: rgb(225, 243, 203); */
@@ -138,7 +131,14 @@ Custom time line items...
 
 }
 
-
+.vis-item.open-source {
+      /* background-color: rgb(225, 243, 203); */
+      /* border-color: rgb(45, 2, 116);       */
+      color: rgb(73, 64, 10);
+      font-family: 'PT Sans', sans-serif; 
+      /* background: blue !important; */
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important;
+}
 
 /*
 generic styles...

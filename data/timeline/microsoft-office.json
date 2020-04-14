@@ -1,0 +1,119 @@
+[
+      {
+            "id": "winOffice1",
+            "title": "Office for Windows",
+            "className": "microsoft",
+            "date": {
+                  "start": "1990-10-19",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice3",
+            "title": "Office 3.x",
+            "className": "microsoft",
+            "date": {
+                  "start": "1992-06-30",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice4",
+            "title": "Office 4.x",
+            "className": "microsoft",
+            "date": {
+                  "start": "1992-08-06",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice5",
+            "title": "Office 95",
+            "className": "microsoft",
+            "date": {
+                  "start": "1995-06-24",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice8",
+            "title": "Office 97",
+            "className": "microsoft",
+            "date": {
+                  "start": "1996-10-19",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice9",
+            "title": "Office 2000",
+            "className": "microsoft",
+            "date": {
+                  "start": "1999-06-07",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice10",
+            "title": "Office XP",
+            "className": "microsoft",
+            "date": {
+                  "start": "2001-05-30",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice11",
+            "title": "Office 2003",
+            "className": "microsoft",
+            "date": {
+                  "start": "2003-06-19",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice12",
+            "title": "Office 2007",
+            "className": "microsoft",
+            "date": {
+                  "start": "2007-01-30",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice14",
+            "title": "Office 2010",
+            "className": "microsoft",
+            "date": {
+                  "start": "2010-06-15",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice15",
+            "title": "Office 2013",
+            "className": "microsoft",
+            "date": {
+                  "start": "2013-11-12",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice16",
+            "title": "Office 2016",
+            "className": "microsoft",
+            "date": {
+                  "start": "2015-09-22",
+                  "end": false
+            }
+      },
+      {
+            "id": "winOffice17",
+            "title": "Office 2019",
+            "className": "microsoft",
+            "date": {
+                  "start": "2018-09-24",
+                  "end": false
+            }
+      }
+]
