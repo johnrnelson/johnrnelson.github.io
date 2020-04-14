@@ -23,16 +23,14 @@ window.WebTimeLine = {
                         if (!DateRecord.id) {
                               DateRecord.id = WebApp.NewID('');
                         }
-                        // const aniWrapper = `<span class="animated bounce">xxx${DateRecord.title}</span>`
-
 
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title 
+                              content: DateRecord.title
                         }
 
-
+                        //Using moment solves a lot of problems.. :-) 
                         CastRecord.start = moment(new Date(DateRecord.date.start));
 
                         //Set a default class incase the data in not so complete..
@@ -56,27 +54,25 @@ window.WebTimeLine = {
                         return false;
 
                   }
-
             }
       },
+      /*
+            Grab data from a URL and push it to our dates list. We only 
+            want to load data one time from a remote resource. 
+      */
       GetData(dates_list, GroupID, DataURL, OnData) {
 
-
+            //WebApp.js will wrap this up for you...
             WebApp.xhr("GET", DataURL, "", function (error, data) {
                   if (error) {
                         console.warn(error);
                   } else {
-
                         try {
                               const xhrDATA = JSON.parse(data);
-                              // const dates_list = [];
-
                               for (let index = 0; index < xhrDATA.length; index++) {
                                     const dateRecord = xhrDATA[index];
-
                                     dates_list.push(WebTimeLine.Convert.DateCast(GroupID, dateRecord));
                               }
-
                               OnData(null, dates_list);
                         } catch (errParseData) {
 
@@ -93,14 +89,9 @@ window.WebTimeLine = {
       */
       BuildTimelineHTML(TimelineItems) {
 
-            // return;
-            //Remove loading...
-            // WebTimeLine.HTMLParent.Control.innerHTML = "";
             WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
             WebTimeLine.HTMLParent.TimeSpanDisplay = document.getElementById("timeline_info");
             WebTimeLine.HTMLParent.Loading.style.display = "none";
-
-
 
             /* 
                   Configuration for the Timeline
@@ -113,26 +104,24 @@ window.WebTimeLine = {
                   min: '1980-01-1',
                   zoomMax: 315360000000000,
                   zoomMin: 10000000000,
-                  
 
-                  moveable: true, zoomable: false,
-
-
-                  // always snap to full hours, independent of the scale
-                  // snap: function (date, scale, step) {
-                  //       var hour = 60 * 60 * 1000;
-                  //       return Math.round(date / hour) * hour;
-                  // }, 
+                  // Use the buttons for better performance....
+                  moveable: true,
+                  zoomable: false,
 
                   //No need to order, we do that in the code....
                   groupOrder: 'none',
 
+                  showTooltips: true,
 
                   //Handle the scroll issues...
-                  // verticalScroll: true,                  // horizontalScroll: true,
+                  // verticalScroll: true,                  
+                  // horizontalScroll: true,
+
                   //zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
-                  height: window.innerHeight - 20,
-                  // height: 200,
+
+                  //Reset as the window is resized....
+                  height: window.innerHeight - 20
             };
 
             // Create a Timeline..
@@ -145,6 +134,7 @@ window.WebTimeLine = {
             WebTimeLine.VisTimeline.on('select', function (properties) {
                   console.info('selected items --> ', properties.items);
                   console.info('selected events --> ', properties);
+                  WebTimeLine.VisTimeline.focus(properties.items[0]);
             });
 
             // This event fires during change...
@@ -152,21 +142,21 @@ window.WebTimeLine = {
 
             //This event fires after the change...
             WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {
-                  // WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
                   WebTimeLine.TimeDisplayStart.innerHTML = moment(DateChanged.start).format("MMMM YYYY");
-                  // WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
                   WebTimeLine.TimeDisplayEnd.innerHTML = moment(DateChanged.end).format("MMMM YYYY");
             });
+
+            WebTimeLine.VisTimeline.on('contextmenu', function (props) {
+                  props.event.preventDefault();
+
+                  if (props.item) {
+                        //Mobile does not have context menu so..  :-(
+                        //console.log('ITEM!',props.item, props);                        
+                  }
+            });
+
             WebTimeLine.HTMLParent.TimeSpanDisplay.style.display = "block";
       },
-
-
-
-
-
-
-
-
 
       /*
       Load multiple data sources for the groups...
@@ -291,9 +281,7 @@ window.WebTimeLine = {
                   }//End running through our lists...
 
             },
-      },
-
-
+      }
 };
 
 
@@ -303,14 +291,16 @@ window.WebTimeLine = {
 */
 window.onload = function () {
 
+      //Kill the context menu...
+      document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+      }, false);
+
       //Hook our menu after everything is loaded and good to go...
       window.AppMenu.Hook();
 
       //Hook our control so we can deal with it later...
       WebTimeLine.HTMLParent.Control = document.getElementById(WebTimeLine.HTMLParent.id);
-
-      WebTimeLine.TimeDisplayStart = document.querySelector("#DateWindowStart")
-      WebTimeLine.TimeDisplayEnd = document.querySelector("#DateWindowEnd")
 
 
 
@@ -334,12 +324,8 @@ window.onload = function () {
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
 
+            // window.onresize();
             var items = new vis.DataSet(time_data);
-
-
-            window.onresize();
-
-
             WebTimeLine.BuildTimelineHTML(items);
       });
 
@@ -357,8 +343,5 @@ window.onresize = function () {
             WebTimeLine.VisTimeline.setOptions({
                   height: window.innerHeight - 20
             });
-
-       
-
       }
 }

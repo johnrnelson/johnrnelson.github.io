@@ -159,7 +159,8 @@ generic styles...
       background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
       /* background: -webkit-radial-gradient(center, ellipse cover, rgb(148, 35, 35) 0%, rgb(150, 25, 199) 100%); */
 
-      cursor: context-menu !important;
+      /* cursor: context-menu !important; */
+      cursor: pointer !important;
 }
 
 .vis-time-axis .vis-text {

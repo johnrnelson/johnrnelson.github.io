@@ -6,6 +6,8 @@
 window.AppMenu = {
       //Set the UI elements and init what ya need....
       Hook() {
+
+
             AppMenu.OverLays.HostElement = document.getElementById("timeline_overlay");
 
 
@@ -13,14 +15,17 @@ window.AppMenu = {
             AppMenu.OverLays.HostElement.BodyElement = AppMenu.OverLays.HostElement.querySelector("#overlay_body");
 
 
+            WebTimeLine.TimeDisplayStart = document.querySelector("#DateWindowStart")
+            WebTimeLine.TimeDisplayEnd = document.querySelector("#DateWindowEnd")
+
             // console.warn('TEST OVERLAY!');
             // WebTimeLine.Overlay.style.display = "block";
             //Load the default help first so the user knows what they can do...
             AppMenu.OverLays.LoadOverlay("Basic Timeline Help", "/apps/timevine/help/index.html", function (err) {
                   if (err) {
                         console.warn('OverLay---', err);
-                  }else{
-                        AppMenu.OverLays.DisplayOverLay("Basic Timeline Help");                        
+                  } else {
+                        AppMenu.OverLays.DisplayOverLay("Basic Timeline Help");
                   }
             });
       },
@@ -31,7 +36,7 @@ window.AppMenu = {
 
             },
 
-            DisplayOverLay(Title){
+            DisplayOverLay(Title) {
 
                   const listItem = AppMenu.OverLays.List[Title];
 
@@ -46,7 +51,7 @@ window.AppMenu = {
             LoadOverlay(Title, URL, OnData) {
 
                   AppMenu.OverLays.List[Title] = {
-                        Title:Title
+                        Title: Title
                   };
 
                   const listItem = AppMenu.OverLays.List[Title];
