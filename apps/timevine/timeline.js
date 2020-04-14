@@ -115,7 +115,7 @@ window.WebTimeLine = {
                   showTooltips: true,
 
                   //Handle the scroll issues...
-                  // verticalScroll: true,                  
+                  verticalScroll: true,                  
                   // horizontalScroll: true,
 
                   //zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
@@ -185,8 +185,9 @@ window.WebTimeLine = {
                         },
                         {
                               id: 4404,
-                              content: "OpenSource",
-                              // showNested: true
+                              content: "Open Source",
+                              nestedGroups: [81, 82, 83],
+                              showNested: true
                         },
 
                   ]);
@@ -212,6 +213,26 @@ window.WebTimeLine = {
 
                   ]);
 
+                  //Open Source Group....
+                  groups.add([
+                        {
+                              id: 81,
+                              content: "Linux",
+                              // nestedGroups: [1]
+                        },
+                        {
+                              id: 82,
+                              content: "JavaScript",
+                              // nestedGroups: [55],
+                              // showNested: true
+                        },
+                        {
+                              id: 83,
+                              content: "Node.js",
+                              // showNested: true
+                        },
+
+                  ]);
                   return groups;
             },
 
@@ -321,6 +342,10 @@ window.onload = function () {
             group_id: 72,
             url: '//data/timeline/microsoft-net.json'
       });
+
+
+
+
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
 
