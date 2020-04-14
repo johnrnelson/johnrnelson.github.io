@@ -35,27 +35,6 @@
 }
  
 
-.timeline_head #timeline_info {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-
-      padding-left: 5px;
-      top: 0;
-      right: 0;
-      left: 30px;
-      bottom: 30px !important;
-      font-family: 'Abel', sans-serif;
-
-      font-size: 25px;
-
-      /* border: 1px solid lightgray;
-      background-color: rgb(231, 220, 220); */
-      /* border: 3px solid blue; */
-      background-color: rgb(231, 220, 220);      
-}
-
-
 
 
 

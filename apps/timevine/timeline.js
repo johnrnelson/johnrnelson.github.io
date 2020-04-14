@@ -99,8 +99,8 @@ window.WebTimeLine = {
             WebTimeLine.HTMLParent.Loading = document.getElementById("timeline_loading");
             WebTimeLine.HTMLParent.TimeSpanDisplay = document.getElementById("timeline_info");
             WebTimeLine.HTMLParent.Loading.style.display = "none";
-            
-            
+
+
 
             /* 
                   Configuration for the Timeline
@@ -111,9 +111,11 @@ window.WebTimeLine = {
                   // max: new Date() + 360,
                   max: '2025-01-1', //Do I really need to hard code this???
                   min: '1980-01-1',
-                  zoomMax:315360000000000,
-                  zoomMin:10000000000,
-                  // zoomFriction:500,
+                  zoomMax: 315360000000000,
+                  zoomMin: 10000000000,
+                  zoomFriction:5,
+
+                  moveable: true, zoomable: false,
 
 
                   // always snap to full hours, independent of the scale
@@ -125,10 +127,10 @@ window.WebTimeLine = {
                   //No need to order, we do that in the code....
                   groupOrder: 'none',
 
+
                   //Handle the scroll issues...
-                  verticalScroll: true,
-                  // horizontalScroll: true,
-                  zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
+                  // verticalScroll: true,                  // horizontalScroll: true,
+                  //zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
                   height: window.innerHeight - 20,
                   // height: 200,
             };
@@ -149,9 +151,11 @@ window.WebTimeLine = {
             // WebTimeLine.VisTimeline.on('rangechange', function (start, end) { });
 
             //This event fires after the change...
-            WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {     
-                  WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
-                  WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
+            WebTimeLine.VisTimeline.on('rangechanged', function (DateChanged, end) {
+                  // WebTimeLine.TimeDisplayStart.innerHTML = DateChanged.start.toLocaleDateString();
+                  WebTimeLine.TimeDisplayStart.innerHTML = moment(DateChanged.start).format("MMMM YYYY");
+                  // WebTimeLine.TimeDisplayEnd.innerHTML = DateChanged.end.toLocaleDateString();
+                  WebTimeLine.TimeDisplayEnd.innerHTML = moment(DateChanged.end).format("MMMM YYYY");
             });
             WebTimeLine.HTMLParent.TimeSpanDisplay.style.display = "block";
       },
@@ -310,9 +314,9 @@ window.onload = function () {
 
 
       //Load the default help first so the user knows what they can do...
-      AppMenu.LoadOverlay("Basic Timeline Help","/apps/timevine/help/index.html",function(err){
-            if(err){
-                  console.warn('OverLay---',err);
+      AppMenu.LoadOverlay("Basic Timeline Help", "/apps/timevine/help/index.html", function (err) {
+            if (err) {
+                  console.warn('OverLay---', err);
             }
       });
 
@@ -340,11 +344,11 @@ window.onload = function () {
 
             window.onresize();
 
-            
+
             WebTimeLine.BuildTimelineHTML(items);
       });
-      
- 
+
+
 
 }
 
@@ -358,5 +362,8 @@ window.onresize = function () {
             WebTimeLine.VisTimeline.setOptions({
                   height: window.innerHeight - 20
             });
+
+       
+
       }
 }

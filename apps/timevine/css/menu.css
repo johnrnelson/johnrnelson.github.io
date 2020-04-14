@@ -4,18 +4,43 @@
       padding-left: 3px;
       top: 0;
       left: 0;
-      right: 30px;
-      bottom: 30px;    
+      /* right: 30px; */
+      bottom: 30px;
 
       font-size: 25px;
-      background-color: rgb(231, 220, 220);  
-      color:blue;
       text-shadow: 1px 1px #ff0000;
+      /* background-color: rgb(231, 220, 220); */
+      color: rgb(17, 17, 122);
+      
 
 }
-.timeline_head #timeline_menu:hover {
-      color: rgb(6, 6, 77);
+
+.timeline_head #timeline_menu i:hover {
+      color: rgb(87, 87, 87);
+      text-shadow: 1px 1px #fdfdfd;
 
       /* border: 1px solid blue;  */
       /* background-color: rgb(221, 6, 6); */
+}
+
+
+
+.timeline_head #timeline_info {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+
+      padding-left: 5px;
+      top: 0;
+      right: 0;
+      left: 100px;
+      bottom: 30px !important;
+      font-family: 'Abel', sans-serif;
+
+      font-size: 25px;
+
+      /* border: 1px solid lightgray;
+      background-color: rgb(231, 220, 220); */
+      /* border: 3px solid blue; */
+      background-color: rgb(231, 220, 220);
 }
