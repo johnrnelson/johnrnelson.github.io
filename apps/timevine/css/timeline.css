@@ -32,10 +32,13 @@
 
       /* border: 1px solid lightgray; */
 
-      -webkit-user-select: none; /* Chrome/Safari */        
-      -moz-user-select: none; /* Firefox */
-      -ms-user-select: none; /* IE10+ */
-      
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+ */
+
 }
 
 
@@ -113,9 +116,9 @@ Custom time line items...
 
 .vis-item.jrn {
       /* background-color: rgb(225, 243, 203); */
-      border-color: rgb(45, 2, 116);      
-      color: rgb(3, 3, 145); 
-      font-family: 'PT Sans', sans-serif; 
+      border-color: rgb(45, 2, 116);
+      color: rgb(3, 3, 145);
+      font-family: 'PT Sans', sans-serif;
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
 }
 
@@ -135,13 +138,15 @@ Custom time line items...
       /* background-color: rgb(225, 243, 203); */
       /* border-color: rgb(45, 2, 116);       */
       color: rgb(73, 64, 10);
-      font-family: 'PT Sans', sans-serif; 
+      font-family: 'PT Sans', sans-serif;
       /* background: blue !important; */
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important;
 }
 
 /*
 generic styles...
+
+
 */
 .vis-item.vis-line {
       border-width: 3px;
@@ -155,11 +160,7 @@ generic styles...
 .vis-item.vis-selected {
 
       border-color: rgb(52, 24, 117);
-
       background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
-      /* background: -webkit-radial-gradient(center, ellipse cover, rgb(148, 35, 35) 0%, rgb(150, 25, 199) 100%); */
-
-      /* cursor: context-menu !important; */
       cursor: pointer !important;
 }
 
