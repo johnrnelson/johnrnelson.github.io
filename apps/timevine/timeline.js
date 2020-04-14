@@ -29,7 +29,7 @@ window.WebTimeLine = {
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title +" grrrrrr"
+                              content: DateRecord.title 
                         }
 
 
