@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.johnrnelson.com/</loc>
-    <priority>1.0</priority>
+    <priority>1</priority>
     <lastmod>2020-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <image:image>
@@ -12,13 +12,13 @@
   </url>
   <url>
     <loc>https://www.johnrnelson.com/resume/index.html</loc>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
     <lastmod>2020-02-01</lastmod> 
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://www.johnrnelson.com/apps/timevine/index.html</loc>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
     <lastmod>2020-04-01</lastmod> 
     <changefreq>monthly</changefreq>
   </url>      
