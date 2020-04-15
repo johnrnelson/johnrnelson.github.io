@@ -66,8 +66,7 @@ largedisplay {
    display: inline;
 }
 
-
-/*@media only screen and (max-width: 600px) {*/
+ 
 @media only screen and (max-width: 950px) {
    largedisplay {
       display: none;
