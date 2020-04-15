@@ -115,6 +115,7 @@ linkz linkinfo title {
    position: relative;
    font-family: 'Roboto', sans-serif;
    font-size: 20px;
+   color:rgb(18, 18, 102);
 }
 
 linkz linkinfo desc {

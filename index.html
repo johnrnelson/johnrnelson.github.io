@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>John R Nelson</title>
+    <title>John Nelson</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description"
@@ -32,6 +32,11 @@
 
         ga('create', 'UA-35200413-1', 'auto');
         ga('send', 'pageview');
+
+      //Kill the context menu...
+      document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+      }, false);        
     </script>
     <script type="application/ld+json">
         {
@@ -62,54 +67,56 @@
 
         <img itemprop="image" src="/imgs/mymugshot_reg.png">
 
-        <name itemprop="name">John R Nelson</name>
+        <name itemprop="name">John Nelson</name>
 
 
         <desc itemprop="disambiguatingDescription">Software engineer living in the Pacific Northwest specializing in
-            client/server development using JavaScript and
-            <a href="https://nodejs.org/en/">Node.js.</a>
+            client/server development using 
+            <a target = "_blank" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,  
+            <a target = "_blank" href="https://nodejs.org/en/">Node.js</a>, and
+            <a target = "_blank" href="https://en.wikipedia.org/wiki/Linux">Linux</a>.
         </desc>
         <br>
         <div xxclass="container-fluid">
-            <linkz>
+            <linkz title="Resume" >
                 <icon>
 
-                    <a title="Resume" href="resume/index.html"><i class="fa fa-book fa-3x" aria-hidden="true"></i></a>
+                    <a href="resume/index.html"><i class="fa fa-book fa-3x" aria-hidden="true"></i></a>
 
                 </icon>
                 <linkinfo>
-                    <a title="Resume" href="resume/index.html">
+                    <a href="resume/index.html">
                         <title>Resume</title>
                     </a>
                     <desc>
-                        My resume in HTML format.
+                        My resume in HTML format to include work history, certifications, tools and technologies.
                     </desc>
                 </linkinfo>
             </linkz>
-            <linkz>
+            <linkz  title="TimeVine">
                 <icon>
 
-                    <a title="Resume" href="/apps/timevine/index.html"><i class="fa fa-calendar-alt fa-3x"
+                    <a href="/apps/timevine/index.html"><i class="fa fa-calendar-alt fa-3x"
                             aria-hidden="true"></i></a>
 
                 </icon>
                 <linkinfo>
-                    <a title="Resume" href="/apps/timevine/index.html">
-                        <title>Timevine</title>
+                    <a href="/apps/timevine/index.html">
+                        <title>TimeVine</title>
                     </a>
                     <desc>
-                        My resume in timeline format with notable events in history to include Microsoft and open
-                        source.
+                        My work history in timeline format with notable events in history to include Microsoft and open
+                        source. 
                     </desc>
                 </linkinfo>
             </linkz>
-            <linkz>
+            <linkz title="GitHub" >
                 <icon>
-                    <a title="GitHub" itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-4x"
+                    <a itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-4x"
                             aria-hidden="true"></i></a>
                 </icon>
                 <linkinfo>
-                    <a title="GitHub" itemprop="url" href="https://github.com/johnrnelson">
+                    <a itemprop="url" href="https://github.com/johnrnelson">
                         <title>GitHub</title>
                     </a>
                     <desc>
@@ -118,17 +125,20 @@
                     </desc>
                 </linkinfo>
             </linkz>
-            <linkz>
-                <icon><a title="Email" itemprop="email" href="mailto:me@johnrnelson.com"><i
+            <linkz title="Email">
+                <icon><a itemprop="email" href="mailto:me@johnrnelson.com"><i
                             class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a> </icon>
                 <linkinfo>
-                    <a title="Email" itemprop="email" href="mailto:me@johnrnelson.com">
+                    <a itemprop="email" href="mailto:me@johnrnelson.com">
                         <title>Email</title>
                     </a>
                     <desc>
                         Send me a note by emailing
                         <a title="Click to Email" itemprop="email"
                             href="mailto:me@johnrnelson.com">me@johnrnelson.com</a>.
+                            I do not currently have or actively maintain any social media accounts 
+                            like twitter or facebook so please email me if you want to say something. 
+                            <i class="far fa-smile-wink"></i>
                     </desc>
                 </linkinfo>
             </linkz>
