@@ -100,7 +100,7 @@
             "className": "jrn",
             "date": {
                   "start": "1997-01-01",
-                  "end": "1998-00-01"
+                  "end": "1998-01-01"
             }
       },
       {
@@ -149,6 +149,54 @@
             "date": {
                   "start": "1995-01-01",
                   "end": "1996-07-01"
+            }
+      },
+      {
+            "title": "Prodigy Online",
+            "className": "jrn",
+            "date": {
+                  "start": "1994-06-01",
+                  "end": "1995-01-01"
+            }
+      },
+      {
+            "title": "American Water Heater Co",
+            "className": "jrn",
+            "date": {
+                  "start": "1992-06-01",
+                  "end": "1994-01-01"
+            }
+      },
+      {
+            "title": "Cyborline BBS",
+            "className": "jrn",
+            "date": {
+                  "start": "1992-01-01",
+                  "end": "1992-06-01"
+            }
+      },
+      {
+            "title": "Apple+",
+            "className": "jrn-tech",
+            "date": {
+                  "start": "1985-06-01",
+                  "end": false
+            }
+      },
+      {
+            "title": "Amiga",
+            "className": "jrn-tech",
+            "date": {
+                  "start": "1986-01-01",
+                  "end": false
+            }
+      },
+      {
+            "title": "Dos 3.0",
+            "className": "jrn-tech",
+            "date": {
+                  "start": "1990-06-01",
+                  "end": false
             }
       }
 ]

@@ -109,44 +109,40 @@ Custom time line items...
 */
 .vis-item.basic {
       background-color: rgb(231, 229, 252);
-      border-color: rgb(1, 1, 105);
-      /* border-width: 1px;  */
+      border-color: rgb(1, 1, 105); 
       font-family: 'Abel', sans-serif;
 }
 
-.vis-item.jrn {
-      /* background-color: rgb(225, 243, 203); */
+.vis-item.jrn {      
       border-color: rgb(45, 2, 116);
       color: rgb(3, 3, 145);
       font-family: 'PT Sans', sans-serif;
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
 }
 
-.vis-item.microsoft {
-      /* background-color: rgb(225, 243, 203); */
-      border-color: rgb(114, 47, 221);
-      color: rgb(34, 4, 4);
-      /* font-family: 'PT Sans', sans-serif; */
-      font-family: 'Roboto', sans-serif;
-      box-shadow: 0 0 10px gray;
-      /* border-width: 1px;  */
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
-
+.vis-item.jrn-tech {
+      border: 0 !important;
+      color: rgb(0, 58, 3);
+      font-family: 'Abel', sans-serif;
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 50%, rgb(182, 181, 181) 100%) !important;
 }
 
-.vis-item.open-source {
-      /* background-color: rgb(225, 243, 203); */
-      /* border-color: rgb(45, 2, 116);       */
-      color: rgb(73, 64, 10);
+
+.vis-item.microsoft {      
+      border-color: rgb(114, 47, 221);
+      color: rgb(34, 4, 4); 
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 0 10px gray;      
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
+}
+
+.vis-item.open-source {color: rgb(73, 64, 10);
       font-family: 'PT Sans', sans-serif;
-      /* background: blue !important; */
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important;
 }
 
 /*
 generic styles...
-
-
 */
 .vis-item.vis-line {
       border-width: 3px;
