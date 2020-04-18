@@ -33,11 +33,8 @@
       /* border: 1px solid lightgray; */
 
       -webkit-user-select: none;
-      /* Chrome/Safari */
       -moz-user-select: none;
-      /* Firefox */
       -ms-user-select: none;
-      /* IE10+ */
 
 }
 
@@ -50,7 +47,6 @@
 /*
 Vis control...
 */
-
 #timeline_viz {
       position: fixed;
       margin: 0;
@@ -63,6 +59,7 @@ Vis control...
       border: 1px solid lightgray;
       background-color: rgb(231, 220, 220);
 }
+
 
 
 /*
@@ -109,11 +106,11 @@ Custom time line items...
 */
 .vis-item.basic {
       background-color: rgb(231, 229, 252);
-      border-color: rgb(1, 1, 105); 
+      border-color: rgb(1, 1, 105);
       font-family: 'Abel', sans-serif;
 }
 
-.vis-item.jrn {      
+.vis-item.jrn {
       border-color: rgb(45, 2, 116);
       color: rgb(3, 3, 145);
       font-family: 'PT Sans', sans-serif;
@@ -128,15 +125,16 @@ Custom time line items...
 }
 
 
-.vis-item.microsoft {      
+.vis-item.microsoft {
       border-color: rgb(114, 47, 221);
-      color: rgb(34, 4, 4); 
+      color: rgb(34, 4, 4);
       font-family: 'Roboto', sans-serif;
-      box-shadow: 0 0 10px gray;      
+      box-shadow: 0 0 10px gray;
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
 }
 
-.vis-item.open-source {color: rgb(73, 64, 10);
+.vis-item.open-source {
+      color: rgb(73, 64, 10);
       font-family: 'PT Sans', sans-serif;
       background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important;
 }

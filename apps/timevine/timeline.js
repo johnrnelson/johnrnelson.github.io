@@ -27,7 +27,10 @@ window.WebTimeLine = {
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
-                              content: DateRecord.title
+                              content: DateRecord.title,
+                              Meta: {
+                                    test: "woot"
+                              }
                         }
 
                         //Using moment solves a lot of problems.. :-) 
@@ -39,6 +42,7 @@ window.WebTimeLine = {
                         }
 
                         CastRecord.className = DateRecord.className;
+                        CastRecord.Meta.Type = DateRecord.className;
 
                         if (!DateRecord.date.end) {
                               //it's a point
@@ -115,13 +119,13 @@ window.WebTimeLine = {
                   showTooltips: true,
 
                   //Handle the scroll issues...
-                  verticalScroll: true,                  
+                  verticalScroll: true,
                   // horizontalScroll: true,
 
                   //zoomKey: 'altKey', // 'altKey', 'ctrlKey', 'shiftKey' or 'metaKey'                
 
                   //Reset as the window is resized....
-                  height: window.innerHeight - 20
+                  height: window.innerHeight - 100
             };
 
             // Create a Timeline..
@@ -132,9 +136,16 @@ window.WebTimeLine = {
                   options);
 
             WebTimeLine.VisTimeline.on('select', function (properties) {
-                  // console.info('selected items --> ', properties.items);
-                  // console.info('selected events --> ', properties);
-                  WebTimeLine.VisTimeline.focus(properties.items[0]);
+
+                  if (properties.items.length) {
+                        const selectedNode = TimelineItems.get(properties.items[0]);
+                        console.log(selectedNode, selectedNode.Meta);
+                        WebTimeLine.VisTimeline.focus(selectedNode.id);
+                        WebTimeLine.Details.SelectNode(selectedNode);
+                  } else {
+                        console.info('Click on timeline without an item...');
+                        WebTimeLine.Details.SelectNode(false);
+                  }
             });
 
             // This event fires during change...
@@ -229,7 +240,7 @@ window.WebTimeLine = {
                         },
 
                   ]);
-                 
+
                   return groups;
             },
 
@@ -299,6 +310,50 @@ window.WebTimeLine = {
                   }//End running through our lists...
 
             },
+      },
+      Details: {
+
+            isFullScreen: false,          //Set via ToggleFullScreen...
+            ParentControl: null,          //Set via the hook...
+            FullScreenControl: null,      //Set via the hook...
+            BodyControl: null,            //Set via the hook...
+            BodyControl: null,            //Set via the hook...
+
+            Hook() {
+                  WebTimeLine.Details.ParentControl = document.getElementById('timeline_details');
+                  // WebTimeLine.Details.FullScreenControl = document.getElementById('timeline_details');
+                  WebTimeLine.Details.FullScreenControl = WebTimeLine.Details.ParentControl.querySelector(".details_fullscreen");
+
+                  WebTimeLine.Details.TitleControl = WebTimeLine.Details.ParentControl.querySelector(".details_title");
+                  WebTimeLine.Details.BodyControl = WebTimeLine.Details.ParentControl.querySelector(".details_body");
+
+
+            },
+            ToggleFullScreen() {
+                  if (WebTimeLine.Details.ParentControl.isFullScreen) {
+                        WebTimeLine.Details.ParentControl.isFullScreen = false;
+                        WebTimeLine.Details.ParentControl.style.height = "90px";
+
+                        WebTimeLine.Details.ParentControl.querySelector(".details_fullscreen").innerHTML = '<i class="fas fa-arrow-alt-circle-up"></i>';
+                  } else {
+                        WebTimeLine.Details.ParentControl.isFullScreen = true;
+                        WebTimeLine.Details.ParentControl.style.height = (window.innerHeight - 10) + "px";
+                        WebTimeLine.Details.ParentControl.querySelector(".details_fullscreen").innerHTML = '<i class="fas fa-arrow-alt-circle-down"></i>';
+                  }
+            },
+            SelectNode(SelectedNode) {
+
+                  if (SelectedNode) {
+                        console.log('show details for selected node', SelectedNode);
+                        WebTimeLine.Details.TitleControl.innerHTML = SelectedNode.content;
+                        WebTimeLine.Details.BodyControl.innerHTML = "Date : " + SelectedNode.start.format("MMMM DD YYYY (dddd)") +
+                              "<br>" +
+                              "Additional details are not yet available.";
+                  } else {
+                        WebTimeLine.Details.TitleControl.innerHTML = "Select an item";
+                        WebTimeLine.Details.BodyControl.innerHTML = "";
+                  }
+            }
       }
 };
 
@@ -313,6 +368,9 @@ window.onload = function () {
       document.addEventListener("contextmenu", function (e) {
             e.preventDefault();
       }, false);
+
+      //Hook our details panel...
+      WebTimeLine.Details.Hook();
 
       //Hook our menu after everything is loaded and good to go...
       window.AppMenu.Hook();
@@ -345,16 +403,16 @@ window.onload = function () {
 
 
       WebTimeLine.Groups.ListURLS.push({
-            group_id: 81,         
+            group_id: 81,
             url: '//data/timeline/open-source-OS.json'
       });
 
       WebTimeLine.Groups.ListURLS.push({
-            group_id: 82,    
+            group_id: 82,
             url: '//data/timeline/open-source-JS.json'
       });
       WebTimeLine.Groups.ListURLS.push({
-            group_id: 83,        
+            group_id: 83,
             url: '//data/timeline/open-source-NODEJS.json'
       });
 
@@ -381,7 +439,13 @@ window.onresize = function () {
       //Redraw our timeline to respect the window size...
       if (WebTimeLine.VisTimeline) {
             WebTimeLine.VisTimeline.setOptions({
-                  height: window.innerHeight - 20
+                  // height: window.innerHeight - 20
+                  height: window.innerHeight - 100
             });
+      }
+
+      //Correct the fullscreen details panel..
+      if (WebTimeLine.Details.ParentControl.isFullScreen) {
+            WebTimeLine.Details.ParentControl.style.height = (window.innerHeight - 10) + "px";
       }
 }

@@ -1,12 +1,12 @@
 [
 
       {
-            "id": "winOS3",
+            "id": "winOS30",
             "title": "<i class='fab fa-windows'></i> Windows 3.0",
             "className": "microsoft",
             "date": {
                   "start": "1990-05-22",
-                  "end": false
+                  "end": "2001-12-31"
             }
       },
       {
@@ -16,6 +16,56 @@
             "date": {
                   "start": "1992-08-06",
                   "end": "2001-12-31"
+
+            }
+      },
+      {
+            "id": "winOS95",
+            "title": "<i class='fab fa-windows'></i> Windows 95",
+            "className": "microsoft",
+            "date": {
+                  "start": "1995-08-06",
+                  "end": "2001-12-31"
+
+            }
+      },
+      {
+            "id": "winOSXP",
+            "title": "<i class='fab fa-windows'></i> Windows XP",
+            "className": "microsoft",
+            "date": {
+                  "start": "2001-10-15",
+                  "end": "2014-04-08"
+
+            }
+      },
+      {
+            "id": "winOS7",
+            "title": "<i class='fab fa-windows'></i> Windows 7",
+            "className": "microsoft",
+            "date": {
+                  "start": "2009-07-22",
+                  "end": "2015-01-13"
+
+            }
+      },
+      {
+            "id": "winOS8",
+            "title": "<i class='fab fa-windows'></i> Windows 8",
+            "className": "microsoft",
+            "date": {
+                  "start": "2012-10-26",
+                  "end": "2016-01-12"
+
+            }
+      },
+      {
+            "id": "winOS10",
+            "title": "<i class='fab fa-windows'></i> Windows 10",
+            "className": "microsoft",
+            "date": {
+                  "start": "2015-07-29",
+                  "end": false
 
             }
       }

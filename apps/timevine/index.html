@@ -28,6 +28,7 @@
       <link rel="stylesheet" type="text/css" href="css/timeline.css">
       <link rel="stylesheet" type="text/css" href="css/menu.css">
       <link rel="stylesheet" type="text/css" href="css/overlay.css">
+      <link rel="stylesheet" type="text/css" href="css/timeline_details.css">
       <script src="../../js/WebApp.js"></script>
       <script src="../../js/moment.min.js"></script>
       <script src="timeline.js"></script>
@@ -86,6 +87,20 @@
             </div>
       </div>
 
+      <div id="timeline_details">
+            <div class="details_header">
+                  <span class="details_title">Timevine view for John Nelson</span>
+                  <span class="details_fullscreen" onclick="WebTimeLine.Details.ToggleFullScreen();">
+                        <i class="fas fa-arrow-alt-circle-up"></i>
+                  </span>
+            </div>
+            <div class="details_body">Click on a timeline item 
+                  to get more details.
+                   
+            </div>
+      </div>
+
+
       <div id="timeline_overlay">
             <!-- Loaded via menu.js -->
             <h1 id="overlay_title">Dynamic Help</h1>
@@ -93,6 +108,7 @@
             </div>
       </div>
 
+      
 </body>
 
 </html>

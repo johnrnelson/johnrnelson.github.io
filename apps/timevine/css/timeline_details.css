@@ -1,0 +1,78 @@
+ #timeline_details {
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+
+       position: fixed;
+       margin: 0;
+       padding: 0;
+       /* 
+            check resize in timeline.js for the actual
+            height....
+       */
+       height: 90px;
+       right: 0;
+       left: 0;
+       bottom: 0px;
+
+
+       /* background-color: rgb(231, 220, 220); */
+       background-color: rgb(231, 220, 220);
+       color: blue;
+       font-family: 'Abel', sans-serif;
+       font-size: 18px;
+       padding: 5px;
+ }
+
+
+ #timeline_details .details_header {
+       position: absolute;
+       top: 0;
+       right: 0;
+       left: 0;
+       height: 20px;
+ 
+       /* border: solid 1px gold; */
+ }
+
+ #timeline_details .details_header .details_title {
+       position: absolute;
+       top: 0;
+       right: 0;
+       left: 0;
+       height: 20px;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+
+       padding-right: 20px;
+       font-family: 'Roboto', sans-serif;
+       font-size: 16px;
+       color: rgb(78, 78, 78);
+       font-weight: bold;
+ }
+
+ #timeline_details .details_header .details_fullscreen {
+       position: absolute;
+       top: 0;
+       right: 0;
+       /* left: 20px;   */
+       height: 20px;
+       font-size: 15px;
+       color: rgb(23, 23, 233);
+ }
+
+
+ #timeline_details .details_body {
+       position: absolute;
+       top: 20px;
+       right: 0;
+       left: 0;
+       bottom: 0;
+       overflow: auto;
+
+       color: rgb(87, 59, 59);
+       font-family: 'PT Sans', sans-serif;
+       font-size: 16px;
+       /* border: solid 1px blue; */
+ }
