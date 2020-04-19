@@ -399,35 +399,35 @@ window.onload = function () {
       //Add all the groups URLS you need to fill the time line...
       WebTimeLine.Groups.ListURLS.push({
             group_id: 411,
-            url: '//data/timeline/jrn.json'
+            url: '//apps/timevine/data/timeline/jrn.json'
       });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 71,
-            url: '//data/timeline/microsoft-windows.json'
+            url: '//apps/timevine/data/timeline/microsoft-windows.json'
       });
       WebTimeLine.Groups.ListURLS.push({
             group_id: 72,
-            url: '//data/timeline/microsoft-net.json'
+            url: '//apps/timevine/data/timeline/microsoft-net.json'
       });
       WebTimeLine.Groups.ListURLS.push({
             group_id: 73,
-            url: '//data/timeline/microsoft-office.json'
+            url: '//apps/timevine/data/timeline/microsoft-office.json'
       });
 
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 81,
-            url: '//data/timeline/open-source-OS.json'
+            url: '//apps/timevine/data/timeline/open-source-OS.json'
       });
 
       WebTimeLine.Groups.ListURLS.push({
             group_id: 82,
-            url: '//data/timeline/open-source-JS.json'
+            url: '//apps/timevine/data/timeline/open-source-JS.json'
       });
       WebTimeLine.Groups.ListURLS.push({
             group_id: 83,
-            url: '//data/timeline/open-source-NODEJS.json'
+            url: '//apps/timevine/data/timeline/open-source-NODEJS.json'
       });
 
 
