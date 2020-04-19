@@ -142,9 +142,9 @@ Custom time line items...
       /* border: 1px solid blue;
       padding-left: 10px;
       margin-left: 5px; */
-      color: rgb(0, 37, 2);
+      color: rgb(154, 250, 159);
       font-family: 'Abel', sans-serif;
-      background-color: rgb(238, 238, 238) !important;      
+      background-color: rgb(120, 45, 250) !important;      
 }
 
 
@@ -177,7 +177,7 @@ generic styles...
 }
 
 .vis-selected {
-      border: 1px solid white !important;
+      /* border: 1px solid white; */
       /* border-color: rgb(52, 24, 117) !important; */
       /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
       cursor: pointer !important;
