@@ -355,25 +355,29 @@ window.WebTimeLine = {
 
                   if (SelectedNode) {
                         WebTimeLine.Details.TitleControl.innerHTML = SelectedNode.content + "&nbsp;<span>-</span>&nbsp;" + SelectedNode.start.format("MMMM DD YYYY (dddd)");
-                        WebTimeLine.Details.BodyControl.innerHTML = "Loading...";
 
-                        //WebApp.js will wrap this up for you... 
-                        const URL2Fetch = "//apps/timevine/data/details/" + SelectedNode.Meta.details_url;
+                        if (SelectedNode.Meta.details_url == undefined) {
+                              WebTimeLine.Details.BodyControl.innerHTML = "No additional information was found about this event."
 
-                        WebApp.xhr("GET", URL2Fetch, "", function (error, data) {
-                              if (error) {
-                                    console.warn(error);
-                                    WebTimeLine.Details.BodyControl.innerHTML = "No additional information was found about this event."
-                              } else {
-                                    try {
-                                          WebTimeLine.Details.BodyControl.innerHTML = data;
-                                    } catch (errDetailsFile) {
-                                          console.warn(errDetailsFile);
-                                          debugger;
-                                    }
-                              }//End xhr valid request....
-                        });
+                        } else {
 
+                              //WebApp.js will wrap this up for you... 
+                              const URL2Fetch = "//apps/timevine/data/details/" + SelectedNode.Meta.details_url;
+
+                              WebApp.xhr("GET", URL2Fetch, "", function (error, data) {
+                                    if (error) {
+                                          console.warn(error);
+                                          WebTimeLine.Details.BodyControl.innerHTML = "Error in application. Please contact support.";
+                                    } else {
+                                          try {
+                                                WebTimeLine.Details.BodyControl.innerHTML = data;
+                                          } catch (errDetailsFile) {
+                                                console.warn(errDetailsFile);
+                                                debugger;
+                                          }
+                                    }//End xhr valid request....
+                              });
+                        }
                   } else {
                         WebTimeLine.Details.TitleControl.innerHTML = "Select an item";
                         WebTimeLine.Details.BodyControl.innerHTML = "";
