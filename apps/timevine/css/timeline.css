@@ -13,6 +13,8 @@
       font-family: 'PT Sans', sans-serif;
       background-color: rgb(231, 220, 220);
 
+      /* double click elements causes zoom */
+      touch-action: manipulation;
 }
 
 /* div {

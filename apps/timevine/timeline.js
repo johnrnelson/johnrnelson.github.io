@@ -139,11 +139,11 @@ window.WebTimeLine = {
 
                   if (properties.items.length) {
                         const selectedNode = TimelineItems.get(properties.items[0]);
-                        console.log(selectedNode, selectedNode.Meta);
+                        // console.log(selectedNode, selectedNode.Meta);
                         WebTimeLine.VisTimeline.focus(selectedNode.id);
                         WebTimeLine.Details.SelectNode(selectedNode);
                   } else {
-                        console.info('Click on timeline without an item...');
+                        // console.info('Click on timeline without an item...');
                         WebTimeLine.Details.SelectNode(false);
                   }
             });
@@ -344,7 +344,7 @@ window.WebTimeLine = {
             SelectNode(SelectedNode) {
 
                   if (SelectedNode) {
-                        console.log('show details for selected node', SelectedNode);
+                        // console.log('show details for selected node', SelectedNode);
                         WebTimeLine.Details.TitleControl.innerHTML = SelectedNode.content;
                         WebTimeLine.Details.BodyControl.innerHTML = "Date : " + SelectedNode.start.format("MMMM DD YYYY (dddd)") +
                               "<br>" +
@@ -353,6 +353,20 @@ window.WebTimeLine = {
                         WebTimeLine.Details.TitleControl.innerHTML = "Select an item";
                         WebTimeLine.Details.BodyControl.innerHTML = "";
                   }
+            }
+      },
+      Redraw() {
+            //Redraw our timeline to respect the window size...
+            if (WebTimeLine.VisTimeline) {
+                  WebTimeLine.VisTimeline.setOptions({
+                        // height: window.innerHeight - 20
+                        height: window.innerHeight - 100
+                  });
+            }
+
+            //Correct the fullscreen details panel..
+            if (WebTimeLine.Details.ParentControl.isFullScreen) {
+                  WebTimeLine.Details.ParentControl.style.height = (window.innerHeight - 10) + "px";
             }
       }
 };
@@ -436,16 +450,5 @@ window.onload = function () {
       respect the new size of the window...
 */
 window.onresize = function () {
-      //Redraw our timeline to respect the window size...
-      if (WebTimeLine.VisTimeline) {
-            WebTimeLine.VisTimeline.setOptions({
-                  // height: window.innerHeight - 20
-                  height: window.innerHeight - 100
-            });
-      }
-
-      //Correct the fullscreen details panel..
-      if (WebTimeLine.Details.ParentControl.isFullScreen) {
-            WebTimeLine.Details.ParentControl.style.height = (window.innerHeight - 10) + "px";
-      }
+      WebTimeLine.Redraw();
 }
