@@ -24,13 +24,19 @@ window.WebTimeLine = {
                               DateRecord.id = WebApp.NewID('');
                         }
 
+                        //Default any meta data for records that don't have it...
+                        if (!DateRecord.Meta) {
+                              DateRecord.Meta = {
+
+                              }
+                        }
+
                         const CastRecord = {
                               id: DateRecord.id,
                               group: GroupID,
                               content: DateRecord.title,
-                              Meta: {
-                                    test: "woot"
-                              }
+                              Meta: DateRecord.Meta
+
                         }
 
                         //Using moment solves a lot of problems.. :-) 
@@ -53,8 +59,8 @@ window.WebTimeLine = {
                         return CastRecord
 
                   } catch (errDateConvert) {
-                        debugger;
-                        alert('Error in timevine data');
+                        // debugger;
+                        console.log(errDateConvert);
                         return false;
 
                   }
@@ -182,11 +188,15 @@ window.WebTimeLine = {
                   // create a data set with groups
                   var groups = new vis.DataSet();
 
+                  /*
+                        If you don't show them nested, they will 
+                        not draw correctly on it's own. Something
+                        to fix later. :-)
+                  */
                   groups.add([
                         {
                               id: 411,
-                              content: "John Nelson",
-                              // nestedGroups: [1]
+                              content: "John Nelson"
                         },
                         {
                               id: 4215,
@@ -344,11 +354,26 @@ window.WebTimeLine = {
             SelectNode(SelectedNode) {
 
                   if (SelectedNode) {
-                        // console.log('show details for selected node', SelectedNode);
-                        WebTimeLine.Details.TitleControl.innerHTML = SelectedNode.content;
-                        WebTimeLine.Details.BodyControl.innerHTML = "Date : " + SelectedNode.start.format("MMMM DD YYYY (dddd)") +
-                              "<br>" +
-                              "Additional details are not yet available.";
+                        WebTimeLine.Details.TitleControl.innerHTML = SelectedNode.content + "&nbsp;<span>-</span>&nbsp;" + SelectedNode.start.format("MMMM DD YYYY (dddd)");
+                        WebTimeLine.Details.BodyControl.innerHTML = "Loading...";
+
+                        //WebApp.js will wrap this up for you... 
+                        const URL2Fetch = "//apps/timevine/data/details/" + SelectedNode.Meta.details_url;
+
+                        WebApp.xhr("GET", URL2Fetch, "", function (error, data) {
+                              if (error) {
+                                    console.warn(error);
+                                    WebTimeLine.Details.BodyControl.innerHTML = "No additional information was found about this event."
+                              } else {
+                                    try {
+                                          WebTimeLine.Details.BodyControl.innerHTML = data;
+                                    } catch (errDetailsFile) {
+                                          console.warn(errDetailsFile);
+                                          debugger;
+                                    }
+                              }//End xhr valid request....
+                        });
+
                   } else {
                         WebTimeLine.Details.TitleControl.innerHTML = "Select an item";
                         WebTimeLine.Details.BodyControl.innerHTML = "";
@@ -435,13 +460,9 @@ window.onload = function () {
 
 
       WebTimeLine.Groups.AddTimeByGroup(function (time_data) {
-
-            // window.onresize();
             var items = new vis.DataSet(time_data);
             WebTimeLine.BuildTimelineHTML(items);
       });
-
-
 
 }
 

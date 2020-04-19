@@ -1,5 +1,4 @@
 [
-
       {
             "id": "winOS30",
             "title": "<i class='fab fa-windows'></i> Windows 3.0",
@@ -7,7 +6,10 @@
             "date": {
                   "start": "1990-05-22",
                   "end": "2001-12-31"
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOS31",
@@ -16,8 +18,10 @@
             "date": {
                   "start": "1992-08-06",
                   "end": "2001-12-31"
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOS95",
@@ -26,8 +30,10 @@
             "date": {
                   "start": "1995-08-06",
                   "end": "2001-12-31"
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOSXP",
@@ -36,8 +42,10 @@
             "date": {
                   "start": "2001-10-15",
                   "end": "2014-04-08"
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOS7",
@@ -46,8 +54,10 @@
             "date": {
                   "start": "2009-07-22",
                   "end": "2015-01-13"
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOS8",
@@ -56,8 +66,10 @@
             "date": {
                   "start": "2012-10-26",
                   "end": "2016-01-12"
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       },
       {
             "id": "winOS10",
@@ -66,7 +78,9 @@
             "date": {
                   "start": "2015-07-29",
                   "end": false
-
-            }
+            },
+            "Meta":{
+                  "details_url": "microsoft-windows.html"
+            }            
       }
 ]

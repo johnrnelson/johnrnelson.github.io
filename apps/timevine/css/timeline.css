@@ -87,19 +87,27 @@ Loading element..
       background: #ffecea;
 }
 
+
+/* alternating column backgrounds */
+.vis-time-axis .vis-grid.vis-odd {
+      background: #f5f5f5;
+}
+
+
+/*
+      Basic visual item...
+*/
 .vis-item {
       border-color: rgb(143, 143, 143);
       background-color: red;
       font-size: 15pt;
       color: purple;
-      box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.5);
+      /* box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.5); */
 
       /* cursor: default !important;  */
       cursor: help !important;
 
       border-radius: 10px !important;
-      ;
-
 }
 
 
@@ -113,17 +121,30 @@ Custom time line items...
 }
 
 .vis-item.jrn {
-      border-color: rgb(45, 2, 116);
+      border-color: rgb(45, 2, 116) !important;;
       color: rgb(3, 3, 145);
       font-family: 'PT Sans', sans-serif;
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
+      /* background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%); */
+}
+
+.vis-item.jrn.vis-selected {
+      border: 1px solid rgb(46, 46, 46) !important;
+      /* border-color: rgb(52, 24, 117) !important; */
+      /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
+      cursor: pointer !important;
+      background-color: rgb(230, 230, 230) !important;
+      color:black;
 }
 
 .vis-item.jrn-tech {
-      border: 0 !important;
-      color: rgb(0, 58, 3);
+      border : 0 !important;
+      /* border-color: rgb(45, 2, 116); */
+      /* border: 1px solid blue;
+      padding-left: 10px;
+      margin-left: 5px; */
+      color: rgb(0, 37, 2);
       font-family: 'Abel', sans-serif;
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 50%, rgb(182, 181, 181) 100%) !important;
+      background-color: rgb(238, 238, 238) !important;      
 }
 
 
@@ -131,14 +152,16 @@ Custom time line items...
       border-color: rgb(114, 47, 221);
       color: rgb(34, 4, 4);
       font-family: 'Roboto', sans-serif;
-      box-shadow: 0 0 10px gray;
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%);
+      background-color: rgb(192, 192, 247) !important;
+      /* box-shadow: 0 0 10px gray; */
+      /* background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%); */
 }
 
 .vis-item.open-source {
       color: rgb(73, 64, 10);
       font-family: 'PT Sans', sans-serif;
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important;
+      background-color: rgb(241, 253, 242) !important;
+      /* background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%) !important; */
 }
 
 /*
@@ -153,11 +176,12 @@ generic styles...
       border-radius: 20px;
 }
 
-.vis-item.vis-selected {
-
-      border-color: rgb(52, 24, 117);
-      background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+.vis-selected {
+      border: 1px solid white !important;
+      /* border-color: rgb(52, 24, 117) !important; */
+      /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
       cursor: pointer !important;
+      background-color: white !important;
 }
 
 .vis-time-axis .vis-text {
