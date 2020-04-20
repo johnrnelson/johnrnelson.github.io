@@ -1,7 +1,7 @@
 [
       {
             "id": "win.net-1",
-            "title": ".Net 1.0",
+            "title": "<i class='fab fa-microsoft'></i> .Net 1.0",
             "date": {
                   "start": "2000-08-01",
                   "end": false
@@ -9,7 +9,7 @@
       },
       {
             "id": "win.net-1.1",
-            "title": ".Net 1.1",
+            "title": "<i class='fab fa-microsoft'></i> .Net 1.1",
             "date": {
                   "start": "2003-04-01",
                   "end": false
@@ -17,7 +17,7 @@
       },
       {
             "id": "win.net-2.0",
-            "title": ".Net 2.0",
+            "title": "<i class='fab fa-microsoft'></i> .Net 2.0",
             "date": {
                   "start": "2006-01-01",
                   "end": false
@@ -25,7 +25,7 @@
       },
       {
             "id": "win.net-3.0",
-            "title": ".Net 3.0",
+            "title": "<i class='fab fa-microsoft'></i> .Net 3.0",
             "date": {
                   "start": "2006-11-21",
                   "end": false
@@ -33,7 +33,7 @@
       },
       {
             "id": "win.net-4.0",
-            "title": ".Net 4.0",
+            "title": "<i class='fab fa-microsoft'></i> .Net 4.0",
             "date": {
                   "start": "2010-04-01",
                   "end": false 

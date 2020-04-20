@@ -201,59 +201,8 @@ window.WebTimeLine = {
                         {
                               id: 711,
                               content: "Technology"
-                        },
-                        // {
-                        //       id: 4215,
-                        //       content: "Microsoft",
-                        //       nestedGroups: [71, 72, 73],
-                        //       showNested: true
-                        // },
-                        // {
-                        //       id: 4404,
-                        //       content: "Open Source",
-                        //       nestedGroups: [81, 82, 83],
-                        //       showNested: true
-                        // },
-
+                        }
                   ]);
-
-                  // //Microsoft Group....
-                  // groups.add([
-                  //       {
-                  //             id: 71,
-                  //             content: "Windows",
-                  //             // nestedGroups: [1]
-                  //       },
-                  //       {
-                  //             id: 72,
-                  //             content: ".Net",
-                  //             // nestedGroups: [55],
-                  //             // showNested: true
-                  //       },
-                  //       {
-                  //             id: 73,
-                  //             content: "Office",
-                  //             // showNested: true
-                  //       },
-
-                  // ]);
-
-                  // //Open Source Group....                 
-                  // groups.add([
-                  //       {
-                  //             id: 81,
-                  //             content: "OS"
-                  //       },
-                  //       {
-                  //             id: 82,
-                  //             content: "JavaScript",
-                  //       },
-                  //       {
-                  //             id: 83,
-                  //             content: "Node.js"
-                  //       },
-
-                  // ]);
 
                   return groups;
             },
@@ -435,31 +384,26 @@ window.onload = function () {
             url: '//apps/timevine/data/timeline/jrn.json'
       });
 
-      WebTimeLine.Groups.ListURLS.push({
-            // group_id: 71,
+      WebTimeLine.Groups.ListURLS.push({            
             group_id: 711,
             url: '//apps/timevine/data/timeline/microsoft-windows.json'
       });
-      WebTimeLine.Groups.ListURLS.push({
-            // group_id: 72,
+      WebTimeLine.Groups.ListURLS.push({            
             group_id: 711,
             url: '//apps/timevine/data/timeline/microsoft-net.json'
       });
-      WebTimeLine.Groups.ListURLS.push({
-            // group_id: 73,
+      WebTimeLine.Groups.ListURLS.push({            
             group_id: 711,
             url: '//apps/timevine/data/timeline/microsoft-office.json'
       });
 
 
-      WebTimeLine.Groups.ListURLS.push({
-            // group_id: 81,
+      WebTimeLine.Groups.ListURLS.push({            
             group_id: 711,
             url: '//apps/timevine/data/timeline/open-source-OS.json'
       });
 
-      WebTimeLine.Groups.ListURLS.push({
-            // group_id: 82,
+      WebTimeLine.Groups.ListURLS.push({            
             group_id: 711,
             url: '//apps/timevine/data/timeline/open-source-JS.json'
       });
