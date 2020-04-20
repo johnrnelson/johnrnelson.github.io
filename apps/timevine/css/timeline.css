@@ -105,9 +105,18 @@ Loading element..
       /* box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.5); */
 
       /* cursor: default !important;  */
-      cursor: help !important;
+      cursor: pointer !important;
 
       border-radius: 10px !important;
+}
+
+.vis-selected {
+      /* border: 1px solid white; */
+      /* border-color: rgb(52, 24, 117) !important; */
+      /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
+      /* cursor: pointer !important; */
+      background-color: white !important;
+      box-shadow: 0 0 10px rgb(87, 87, 87); 
 }
 
 
@@ -121,7 +130,8 @@ Custom time line items...
 }
 
 .vis-item.jrn {
-      border-color: rgb(45, 2, 116) !important;;
+      border-color: rgb(45, 2, 116) !important;
+      ;
       color: rgb(3, 3, 145);
       font-family: 'PT Sans', sans-serif;
       /* background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%); */
@@ -133,28 +143,24 @@ Custom time line items...
       /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
       cursor: pointer !important;
       background-color: rgb(230, 230, 230) !important;
-      color:black;
+      color: black;
 }
 
 .vis-item.jrn-tech {
-      border : 0 !important;
-      /* border-color: rgb(45, 2, 116); */
-      /* border: 1px solid blue;
-      padding-left: 10px;
-      margin-left: 5px; */
-      color: rgb(154, 250, 159);
+      border: 0 !important; 
+      color: rgb(206, 195, 223);
       font-family: 'Abel', sans-serif;
-      background-color: rgb(120, 45, 250) !important;      
+      background-color: rgb(13, 49, 4) !important;
 }
 
 
 .vis-item.microsoft {
       border-color: rgb(114, 47, 221);
-      color: rgb(34, 4, 4);
       font-family: 'Roboto', sans-serif;
-      background-color: rgb(192, 192, 247) !important;
       /* box-shadow: 0 0 10px gray; */
       /* background: -webkit-radial-gradient(center, ellipse cover, rgb(212, 212, 212) 2%, rgb(230, 230, 230) 100%); */
+      color: rgb(216, 216, 216);
+      background-color: rgb(111, 111, 255) !important;
 }
 
 .vis-item.open-source {
@@ -176,13 +182,6 @@ generic styles...
       border-radius: 20px;
 }
 
-.vis-selected {
-      /* border: 1px solid white; */
-      /* border-color: rgb(52, 24, 117) !important; */
-      /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
-      cursor: pointer !important;
-      background-color: white !important;
-}
 
 .vis-time-axis .vis-text {
       color: purple;
