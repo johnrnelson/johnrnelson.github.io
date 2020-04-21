@@ -16,7 +16,7 @@ package-lock.json
 SECRET
 
 # we are not using this for testing docs....
-#TESTING
+apps/TEST
 
 # Logs
 logs
