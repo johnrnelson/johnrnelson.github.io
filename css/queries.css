@@ -1,18 +1,10 @@
-@media only screen and (min-width: 766px) {
-      largedisplay {
-            display: none;
-      }
-
+@media only screen and (min-width: 766px) {     
       smalldisplay {
-            display: inline;
+            display: none;
       }
 }
 @media only screen and (max-width: 767px) {
       largedisplay {
-            display: inline;
-      }
-
-      smalldisplay {
-            display: block;
-      }
+            display: none;
+      } 
 }
