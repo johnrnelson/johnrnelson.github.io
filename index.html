@@ -53,90 +53,135 @@
             "url": "https://www.johnrnelson.com"
         }
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+
     <script src="https://kit.fontawesome.com/15f646222d.js" crossorigin="anonymous"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet">
+
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Port+Lligat+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/queries.css">
 </head>
 
 <body>
-    <center class="backdrop" itemscope itemtype="http://schema.org/Person">
-        <img itemprop="image" src="/imgs/mymugshot_reg.png">
-        <name itemprop="name">John Nelson</name>
-        <desc itemprop="disambiguatingDescription">Software engineer living in the Pacific Northwest specializing in
-            client/server development using
-            <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,
-            <a target="_blank" href="https://nodejs.org/en/">Node.js</a>, and
-            <a target="_blank" href="https://en.wikipedia.org/wiki/Linux">Linux</a>.
-        </desc>
-        <div>
-            <linkz title="Resume">
-                <icon>
-                    <a href="resume/index.html"><i class="fa fa-book fa-3x" aria-hidden="true"></i></a>
-                </icon>
-                <linkinfo>
-                    <a href="resume/index.html">
-                        <title>Resume</title>
-                    </a>
-                    <desc>
-                        My resume in HTML format to include work history, certifications, tools and technologies.
-                    </desc>
-                </linkinfo>
-            </linkz>
-            <linkz title="TimeVine">
-                <icon>
+    <center class="backdrop">
 
-                    <a href="/apps/timevine/index.html"><i class="fa fa-calendar-alt fa-3x" aria-hidden="true"></i></a>
 
-                </icon>
-                <linkinfo>
-                    <a href="/apps/timevine/index.html">
-                        <title>TimeVine</title>
-                    </a>
-                    <desc>
-                        My work history in timeline format with notable events in history to include Microsoft and open
-                        source.
-                    </desc>
-                </linkinfo>
-            </linkz>
-            <linkz title="GitHub">
-                <icon>
-                    <a itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-4x"
-                            aria-hidden="true"></i></a>
-                </icon>
-                <linkinfo>
-                    <a itemprop="url" href="https://github.com/johnrnelson" target="_blank">
-                        <title>GitHub</title>
-                    </a>
-                    <desc>
-                        Most of my work is done on private projects but a few are available like
-                        this <a style="color:blue" target="_blank"
-                            href="https://github.com/johnrnelson/johnrnelson.github.io">web site</a>.
-                    </desc>
-                </linkinfo>
-            </linkz>
-            <linkz title="Email">
-                <icon><a itemprop="email" href="mailto:me@johnrnelson.com"><i class="fa fa-envelope-o fa-3x"
-                            aria-hidden="true"></i></a> </icon>
-                <linkinfo>
-                    <a itemprop="email" href="mailto:me@johnrnelson.com">
-                        <title>Email</title>
-                    </a>
-                    <desc>
-                        Send me a note by emailing
-                        <a title="Click to Email" itemprop="email"
-                            href="mailto:me@johnrnelson.com">me@johnrnelson.com</a>.
-                        I do not currently have or actively maintain any social media accounts
-                        like twitter or facebook so please email me if you want to say something.
-                        <i class="far fa-smile-wink"></i>
-                    </desc>
-                </linkinfo>
-            </linkz>
+        <div class="row">
+          
+            <div class="col-md-4" itemscope itemtype="http://schema.org/Person">
+                  
+                <img itemprop="image" src="/imgs/mymugshot_reg.png" />
+                <name itemprop="name">John Nelson</name>
+                <desc itemprop="disambiguatingDescription">Software engineer living in the Pacific Northwest
+                    specializing in
+                    client/server development using
+                    <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>,
+                    <a target="_blank" href="https://nodejs.org/en/">Node.js</a>, and
+                    <a target="_blank" href="https://en.wikipedia.org/wiki/Linux">Linux</a>.
+                </desc>
+
+            </div>
+            <div class="col-md-8">
+
+                <largedisplay>
+                    <br><br>
+                     
+                </largedisplay>
+
+
+                <!-- <smalldisplay>
+                    <br><br>
+                    <p>
+                        Testing small display text...
+                    </p>
+                </smalldisplay> -->
+
+                <div>
+                    <linkz title="Resume">
+                        <icon>
+                            <a href="resume/index.html"><i class="fa fa-book" aria-hidden="true"></i></a>
+                        </icon>
+                        <linkinfo>
+                            <a href="resume/index.html">
+                                <title>Resume</title>
+                            </a>
+                            <desc>
+                                My resume in HTML format to include work history, certifications, tools and
+                                technologies.
+                            </desc>
+                        </linkinfo>
+                    </linkz>
+                    <linkz title="TimeVine">
+                        <icon>
+
+                            <a href="/apps/timevine/index.html"><i class="fa fa-calendar-alt"
+                                    aria-hidden="true"></i></a>
+
+                        </icon>
+                        <linkinfo>
+                            <a href="/apps/timevine/index.html">
+                                <title>TimeVine</title>
+                            </a>
+                            <desc>
+                                My work history in timeline format with notable events in history to include Microsoft
+                                and open
+                                source.
+                            </desc>
+                        </linkinfo>
+                    </linkz>
+                    <linkz title="GitHub">
+                        <icon>
+                            <a itemprop="url" href="https://github.com/johnrnelson"><i class="fa fa-github fa-4x"
+                                    aria-hidden="true"></i></a>
+                        </icon>
+                        <linkinfo>
+                            <a itemprop="url" href="https://github.com/johnrnelson" target="_blank">
+                                <title>GitHub</title>
+                            </a>
+                            <desc>
+                                Most of my work is done on private projects but a few are available like
+                                this <a style="color:rgb(206, 182, 252)" target="_blank"
+                                    href="https://github.com/johnrnelson/johnrnelson.github.io">web site</a>.
+                            </desc>
+                        </linkinfo>
+                    </linkz>
+                    <linkz title="Email">
+                        <icon><a itemprop="email" href="mailto:me@johnrnelson.com"><i class="fa fa-envelope-o"
+                                    aria-hidden="true"></i></a> </icon>
+                        <linkinfo>
+                            <a itemprop="email" href="mailto:me@johnrnelson.com">
+                                <title>Email</title>
+                            </a>
+                            <desc>
+                                Send me a note by emailing
+                                <a title="Click to Email" itemprop="email"
+                                    href="mailto:me@johnrnelson.com">me@johnrnelson.com</a>.
+                                I do not currently have or actively maintain any social media accounts
+                                like twitter or facebook so please email me if you want to say something.
+                                <i class="far fa-smile-wink"></i>
+                            </desc>
+                        </linkinfo>
+                    </linkz>
+                </div>
+
+            </div>
         </div>
+  
+        
     </center>
+
 </body>
 
 </html>

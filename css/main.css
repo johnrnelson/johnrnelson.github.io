@@ -9,80 +9,85 @@ body {
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   /* background: -webkit-radial-gradient(center, ellipse cover, rgb(201, 200, 200) 0%, rgb(41, 41, 41) 100%); */
+   /* background-color: blue; */
+   /* background: -webkit-radial-gradient(center, ellipse cover, rgb(71, 71, 71) 0%, #E0E0E0 100%); */
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
 }
 
 name {
    display: block;
-   color: black;
+   color: rgb(33, 167, 0);
    text-shadow: 1px 1px 1px #000000;
-   font-size: 26px;
-   padding-top: 10px;
+   padding-top: 5px;
    padding-bottom: 10px;
+   font-family: 'Permanent Marker', cursive;
+   font-size: 36px;
 }
 
 desc {
    display: block;
-   color: #404040;
+   color: rgb(148, 147, 147);
    font-family: 'PT Sans', sans-serif;
    font-size: 20px;
    padding-left: 20px;
    padding-right: 20px;
    padding-bottom: 30px;
+
 }
 
-p {
-   color: #333333;
-   cursor: default;
+i 
+ 
+ 
+
+a {
+   color: rgb(112, 112, 112);
 }
 
-div {
-   color: black;
-   color: #333333;
-}
-
-a { 
-   color:black;
-}
-
-
+/* Actual background */
 .backdrop {
    position: absolute;
    top: 0;
    bottom: 0;
    left: 0;
    right: 0;
-   background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+   background: transparent;
    overflow: auto;
+   background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
+   overflow-x: hidden;
+   margin: 0;
+   padding: 0;
+   color: white;
 }
 
+
+
+
+
+
+
 smalldisplay {
-   display: none;
-   background:transparent;
+   display: inline;
+   background: transparent;
 }
 
 largedisplay {
-   background:transparent;
-   display: inline;
+   background: transparent;
+   display: none;
 }
 
- 
-@media only screen and (max-width: 950px) {
-   largedisplay {
-      display: none;
-   }
-   smalldisplay {
-      display: block;
-   }
-}
 
 linkz {
    display: block;
    position: relative;
    text-align: left;
-   min-height: 80px;   
+   /* min-height: 80px; */
    width: 60%;
-   padding-bottom: 10px;   
+   padding-bottom: 10px;
+   padding-right: 20px;
 }
 
 linkz icon {
@@ -94,35 +99,41 @@ linkz icon {
 
 linkz icon a i {
    /*font-size: 20px;*/
-   color: silver;
+   color: rgb(183, 161, 243);
    padding-left: 8px;
    padding-right: 8px;
+   text-shadow: 1px 1px 1px #464646;
+   font-size: 60px;
 }
+
 linkz icon a i:hover {
-   color:purple;
+   color: rgb(200, 189, 228);
+   text-shadow: 1px 1px 1px #000000;
 }
 
 linkz linkinfo {
    display: block;
    position: relative;
    left: 80px;
-   right: 0; 
+   right: 0;
 }
 
 linkz linkinfo title {
    display: block;
    position: relative;
    font-family: 'Roboto', sans-serif;
-   font-size: 20px;
-   color:rgb(18, 18, 102);
+   font-size: 25px;
+   color: rgb(189, 189, 250);
+   text-align: left;
 }
 
 linkz linkinfo desc {
-   display: block; 
-   position: relative; 
-   font-family: 'Abel', sans-serif;
-   font-size: 18px;
-   color: black;
-   padding:0;
+   display: block;
+   position: relative;
+   /* font-family: 'Abel', sans-serif; */
+   font-family: 'Port Lligat Sans', sans-serif;
+   font-size: 20px;
+   color: rgb(156, 156, 156);
+   padding: 0;
+   text-align: left;
 }
-

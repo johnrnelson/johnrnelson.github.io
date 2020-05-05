@@ -1,14 +1,17 @@
 .body {
-    overflow: auto;
     /* fixes scrollbars */
-    margin: 15px;
-    font-family: 'PT Sans', sans-serif;
-    background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%);
+    overflow-x: hidden;
+    /* margin: 15px; */
+    
+    font-family: 'PT Sans', sans-serif;    
 }
 
-.container {
-    width: 100%;
-    margin: 5px;
+.container-fluid {
+    /* width: 100%; */
+    padding-top: 5px;
+    /* border:solid 1px blue; */    
+    /* background: -webkit-radial-gradient(center, ellipse cover, #F5F5F5 0%, #E0E0E0 100%); */
+    background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
 }
 
 /* Set panel styles.. */
@@ -64,7 +67,7 @@
 .HistoryRowWhenWhere .HistoryYear {
     color: rgb(65, 65, 65);
     margin: 0;
-    padding: 0; 
+    padding: 0;
     font-family: 'Abel', sans-serif;
     font-weight: bold;
 }
@@ -74,10 +77,10 @@
     margin: 0;
     padding: 0;
     font-variant: small-caps;
-    text-decoration:none;  
+    text-decoration: none;
     /* white-space: nowrap;   */
 }
- 
+
 
 .HistoryRowWhenWhere .HistoryCompany {
     color: rgb(0, 0, 124);
@@ -96,7 +99,7 @@
 }
 
 .HistoryTDDesc {
-    vertical-align: text-top;        
+    vertical-align: text-top;
     padding-top: 6px;
 }
 
@@ -137,10 +140,11 @@
 }
 
 /* mcp styles */
-.mcp{
-    padding:0;
-    margin:0;
+.mcp {
+    padding: 0;
+    margin: 0;
 }
+
 .mcpExam {
     font-size: 16px;
     color: rgb(62, 102, 58);
@@ -151,7 +155,7 @@
     font-size: 12px;
     color: rgb(23, 0, 85);
     cursor: default;
-    
+
 }
 
 .mcpDesc {

@@ -1,0 +1,18 @@
+@media only screen and (min-width: 766px) {
+      largedisplay {
+            display: none;
+      }
+
+      smalldisplay {
+            display: inline;
+      }
+}
+@media only screen and (max-width: 767px) {
+      largedisplay {
+            display: inline;
+      }
+
+      smalldisplay {
+            display: block;
+      }
+}
