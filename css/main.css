@@ -43,6 +43,13 @@ desc {
 
 a {
    color: rgb(164, 153, 190);
+   text-decoration: none;
+}
+
+a:hover {
+   color: rgb(141, 240, 137);
+   text-shadow: 1px 1px 1px #2a0275;
+   text-decoration: none;
 }
 
 /* Actual background */
@@ -121,8 +128,8 @@ linkz icon a i {
 }
 
 linkz icon a i:hover {
-   color: rgb(200, 189, 228);
-   text-shadow: 1px 1px 1px #5f5f5f;
+   color: rgb(141, 240, 137);
+   text-shadow: 1px 1px 1px #2a0275;
 }
 
 linkz linkinfo {
@@ -130,7 +137,7 @@ linkz linkinfo {
    /* display: inline; */
    position: relative;
    /* position: absolute; */
-   
+
    top: 0;
 
    left: 80px;
@@ -142,7 +149,7 @@ linkz linkinfo .linkinfo_title {
    padding: 0;
    margin: 0;
    text-decoration: none;
- 
+
    position: relative;
    font-family: 'Roboto', sans-serif;
    font-size: 35px;
@@ -153,8 +160,9 @@ linkz linkinfo .linkinfo_title {
 }
 
 linkz linkinfo .linkinfo_title:hover {
-   color: rgb(200, 189, 228);
-   text-shadow: 1px 1px 1px #5f5f5f;
+   color: rgb(141, 240, 137);
+   text-shadow: 1px 1px 1px #2a0275;
+
 }
 
 
