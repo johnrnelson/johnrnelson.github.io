@@ -112,17 +112,17 @@ linkz icon {
 
 linkz icon a i {
    /*font-size: 20px;*/
-   color: rgb(183, 161, 243);
    padding-left: 8px;
    padding-right: 8px;
    padding-top: 8px;
+   color: rgb(183, 161, 243);
    text-shadow: 1px 1px 1px #000000;
    font-size: 60px;
 }
 
 linkz icon a i:hover {
    color: rgb(200, 189, 228);
-   text-shadow: 1px 1px 1px #000000;
+   text-shadow: 1px 1px 1px #5f5f5f;
 }
 
 linkz linkinfo {
@@ -142,13 +142,27 @@ linkz linkinfo .linkinfo_title {
    padding: 0;
    margin: 0;
    text-decoration: none;
-   color: green !important;
+ 
    position: relative;
    font-family: 'Roboto', sans-serif;
    font-size: 35px;
-   color: rgb(189, 189, 250);
+   /* color: rgb(189, 189, 250); */
+   color: rgb(183, 161, 243);
+   text-shadow: 1px 1px 1px #000000;
    text-align: left;
 }
+
+linkz linkinfo .linkinfo_title:hover {
+   color: rgb(200, 189, 228);
+   text-shadow: 1px 1px 1px #5f5f5f;
+}
+
+
+
+
+
+
+
 
 
 linkz linkinfo desc {
