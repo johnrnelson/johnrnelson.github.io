@@ -71,6 +71,7 @@ a:hover {
 
 .center_vert {
    margin: 0;
+   padding-top: 5px;
    position: absolute;
 }
 

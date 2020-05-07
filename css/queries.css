@@ -1,3 +1,5 @@
+ 
+
 @media only screen and (min-width: 766px) {
       smalldisplay {
             display: none;
@@ -18,12 +20,15 @@
       largedisplay {
             display: none;
       }
+
       linkz icon a i {
             font-size: 40px;
       }
+
       linkz linkinfo .linkinfo_title {
             font-size: 25px;
       }
+
       linkz linkinfo desc {
             font-size: 18px;
       }
