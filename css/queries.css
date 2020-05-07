@@ -1,5 +1,4 @@
  
-
 @media only screen and (min-width: 766px) {
       smalldisplay {
             display: none;
@@ -7,6 +6,7 @@
 
       .center_vert {
             margin: 0;
+            /* padding-top: 80px; */
             position: absolute;
             top: 50%;
             -ms-transform: translateY(-50%);
