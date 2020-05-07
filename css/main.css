@@ -64,7 +64,7 @@ a:hover {
    background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
    overflow-x: hidden;
    margin: 0;
-   padding: 0;
+   padding: 20px;
    color: white;
 }
 
