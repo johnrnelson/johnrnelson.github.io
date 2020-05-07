@@ -68,6 +68,19 @@ a:hover {
    color: white;
 }
 
+
+.center_vert {
+   margin: 0;
+   position: absolute;
+}
+
+
+
+
+
+
+
+
 /* Dynamic display styles set via the queries.css files... */
 smalldisplay {
    display: inline;
@@ -79,6 +92,10 @@ largedisplay {
    background: transparent;
 }
 
+hugedisplay {
+   display: none;
+   background: transparent;
+}
 
 
 
