@@ -11,10 +11,14 @@
       height: 100%;
       width: 100%;
       font-family: 'PT Sans', sans-serif;
-      background-color: rgb(231, 220, 220);
-
+      
       /* double click elements causes zoom */
       touch-action: manipulation;
+      /* background-color: rgb(231, 220, 220); */
+      /* background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);      */
+      
+      background-color: white;
+      
 }
 
 /* div {
@@ -30,15 +34,35 @@
       right: 0;
       left: 0;
       bottom: 50px;
-      background-color: rgb(231, 220, 220);
-
-      /* border: 1px solid lightgray; */
+      /* background-color: rgb(231, 220, 220); */
+      /* background-color: transparent !important; */
+      /* background-color: blue !important; */
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
+      
+      
+      border: 1px solid lightgray;
 
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,7 +83,8 @@ Vis control...
       bottom: 0;
 
       border: 1px solid lightgray;
-      background-color: rgb(231, 220, 220);
+      background-color: rgb(231, 220, 220); 
+      
 }
 
 
@@ -85,6 +110,7 @@ Loading element..
       font-family: 'PT Sans', sans-serif;
       font-size: 12pt;
       background: #ffecea;
+      
 }
 
 
