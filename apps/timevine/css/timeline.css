@@ -25,28 +25,6 @@
       cursor: default;
 } */
 
-.timeline_head {
-      cursor: default;
-      position: fixed;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 50px;
-      /* background-color: rgb(231, 220, 220); */
-      /* background-color: transparent !important; */
-      /* background-color: blue !important; */
-      background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
-      
-      
-      border: 1px solid lightgray;
-
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-
-}
 
 
 

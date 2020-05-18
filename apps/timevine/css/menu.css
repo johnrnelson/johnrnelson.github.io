@@ -1,3 +1,27 @@
+.timeline_head {
+      cursor: default;
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 50px;
+      /* background-color: rgb(231, 220, 220); */
+      /* background-color: transparent !important; */
+      /* background-color: blue !important; */
+      background: -webkit-radial-gradient(center, ellipse cover, rgb(75, 75, 75) 0%, rgb(41, 41, 41) 100%);
+      
+      
+      border: 1px solid rgb(0, 0, 0);
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+
+}
+
+
 .timeline_head #timeline_menu {
       position: absolute;
       margin: 0;
@@ -15,9 +39,7 @@
       
       color: rgb(179, 170, 204);
       text-shadow: 1px 1px #000000;
-
-      /* border: 1px solid blue;  */
-      /* background-color: rgb(221, 6, 6); */
+  
 }
 
 
@@ -35,11 +57,7 @@
       font-family: 'Abel', sans-serif;
 
       font-size: 25px;
-
-      /* border: 1px solid lightgray;
-      background-color: rgb(231, 220, 220); */
-      /* border: 3px solid blue; */
-      /* background-color: rgb(231, 220, 220); */
+ 
       background-color: transparent;
       color:rgb(69, 253, 23);
 }
